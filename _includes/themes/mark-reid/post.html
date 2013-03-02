@@ -1,10 +1,12 @@
 <div id="page">
 	
   <h1 class="emphnext">{{ page.title }}</h1>
-
   <span class="date">{{ page.date | date_to_long_string }}</span>
   <br/>
+
+  <div class="post-text">
   {{ content }}
+  </div>
 
   {% if page.picasa-album %}
   <div class="picasa-gallery" user_id="{{ site.author.picasa }}" album_id="{{ page.picasa-album }}">

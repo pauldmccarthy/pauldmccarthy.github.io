@@ -64,6 +64,10 @@ hr {
 
 sup { line-height: 1ex; }
 
+.post-text {
+  text-align: justify;
+}
+
 #site {
 	max-width: 46em;
 	margin: 1.5em auto 3em auto;
@@ -241,6 +245,11 @@ ul.compact li a {
 }
 #header:hover .byline a { color: silver; text-shadow: none; }
 #header:hover .byline a:hover { color: black; text-shadow: #aaa 1px 1px 2px;}
+
+.date {
+  font-style: italic;
+  float: right;
+}
 
 /* @group Twitter */
 #twitter_update_list { display: inline; margin: 0; }
