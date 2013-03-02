@@ -1,0 +1,46 @@
+--- 
+title: wifi horror
+layout: post
+---
+Connecting to my university wireless network under linux turned out to be more of a headache than I'd expected. I thought that most wireless drivers in the kernel, in addition to wpa_supplicant, had reached a reasonable level of maturity, as I've had no trouble on installs I've configured over the past few years. Open network manager (or equivalent), copy in the details and you're away, couldn't be easier.  So after a fresh install of karmic on my assigned iMac (10,1), I expected to be up and running pretty quickly. However, a combination of the network security configuration, and an obsolete version of wpa_supplicant, meant that it took almost 2 days before I had a stable connection.  I wasted a lot of time assuming that it was a device driver problem. I tried madwifi, but in the end discovered that the ath9k driver shipped in the current kernel (2.6.31) works fine. I did get a stable connection with ath_pci (provided by madwifi), but only after wpa_supplicant literally spent minutes scanning through the 2.4 GHz range, before deciding upon an AP in the 5 GHz range.  Searching through the wpa_supplicant docs, I decided to try nl80211 because it supports the 'scan_freq' option, which is supposed to allow you to control which frequencies are scanned when trying to associate with an access point. As it turns out, when I switched over to nl80211, wpa_supplicant associated itself immediately with an AP in the 2.4 GHz range, meaning that I no longer needed to use scan_freq. Whatever; I don't care how it works, just so long as it works.  I'd tried and deleted both gnome network manager and wicd before realising that wpa_supplicant was the problem, but then decided to leave them uninstalled, and to configure the interface the old way, via /etc/network/interfaces; it's a desktop after all (i.e. no roaming required), and I'm currently planning to use wireless exclusively (sounds stupid, but I have my reasons ;), so I don't really have a need for a manager applet.  I compiled and installed wpa_supplicant 0.7.1, using the following (somewhat bloated) .config:  
+CONFIG_DRIVER_HOSTAP=y 
+CONFIG_DRIVER_ATMEL=y 
+CONFIG_DRIVER_WEXT=y 
+CONFIG_DRIVER_MADWIFI=y 
+CONFIG_DRIVER_NL80211=y 
+CFLAGS += -I/home/paul/mad/trunk/ 
+CONFIG_DRIVER_WIRED=y 
+CONFIG_IEEE8021X_EAPOL=y 
+CONFIG_EAP_MD5=y 
+CONFIG_EAP_MSCHAPV2=y 
+CONFIG_EAP_TLS=y 
+CONFIG_EAP_PEAP=y 
+CONFIG_EAP_TTLS=y 
+CONFIG_EAP_GTC=y 
+CONFIG_EAP_OTP=y 
+CONFIG_EAP_LEAP=y 
+CONFIG_PKCS12=y 
+CONFIG_SMARTCARD=y 
+CONFIG_CTRL_IFACE=y 
+CONFIG_BACKEND=file 
+CONFIG_PEERKEY=y 
+  configured the interface to come up on boot with this in /etc/network/interfaces  
+auto wlan0 
+iface wlan0 inet dhcp 
+wpa-driver nl80211 
+wpa-conf /etc/wpa_supplicant.conf 
+  and this in /etc/wpa_supplicant.conf:  
+ctrl_interface=/var/run/wpa_supplicant 
+network{ 
+ proto=WPA2 
+ ssid="network_ssid" 
+ scan_ssid=0 
+ key_mgmt=WPA-EAP 
+ pairwise=CCMP 
+ group=CCMP 
+ eap=PEAP 
+ identiy="my_username" 
+ password="my_password" 
+ phase1="peapver=0" 
+ phase2="auth=MSCHAPV2" 
+} 
