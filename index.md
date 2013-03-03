@@ -1,4 +1,5 @@
 ---
+title: small adventures
 layout: page
 ---
 {% include JB/setup %}
