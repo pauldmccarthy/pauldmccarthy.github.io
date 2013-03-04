@@ -21,10 +21,21 @@
         callback(albums);
       });
     },
-    
+
     images: function(user, album, callback) {
-      var url = "http://picasaweb.google.com/data/feed/base/user/:user_id/albumid/:album_id?alt=json&kind=photo&hl=en_US&fields=entry(title,gphoto:numphotos,media:group(media:content,media:thumbnail))&callback=?";
+      var url = "http://picasaweb.google.com/data/feed/base/user/:user_id/albumid/:album_id?alt=json&kind=photo&hl=en_US&fields=entry(title,gphoto:numphotos,media:group(media:content,media:thumbnail))&imgmax=:imgmax&callback=?";
+
+      var imgSize = function() {
+        var opts   = [94, 110, 128, 200, 220, 288, 320, 400, 512, 576, 640, 720, 800, 912, 1024, 1152, 1280, 1440, 1600];
+        var ht     = $(window).height();
+        var wd     = $(window).width();
+        var maxsz  = ht > wd ? wd : ht;
+        var bestsz = opts.filter(function(x){return x < maxsz;}).pop();
+
+        return bestsz;
+      }();
       url = url.replace(/:user_id/, user).replace(/:album_id/, album);
+      url = url.replace(/:imgmax/, imgSize);
       var image = null;
       var images = [];
       $.getJSON(url, function(data) {
