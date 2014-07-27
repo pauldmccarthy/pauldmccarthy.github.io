@@ -4,6 +4,6 @@ layout: post
 picasa-album: 6040839055267466577
 ---
 
-<p>Seven days straight, climbing with friends in the mountains of North Wales,
+Seven days straight, climbing with friends in the mountains of North Wales,
 with blue skies every day, and not a drop of rain. I swear, it's always sunny
-in North Wales.</p>
+in North Wales.
