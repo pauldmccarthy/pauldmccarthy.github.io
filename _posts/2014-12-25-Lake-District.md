@@ -9,7 +9,7 @@ they've got attitude. Claire and I spent a few days over Christmas doing a few
 hikes in fresh snow and great weather.
 
 We did a couple of lovely loops, both ridge traverses. The first started and
-finished at tiny village called Little Langdale, and took us around the cirque
+finished at a tiny village called Little Langdale, and took us around the cirque
 beneath Wetherlam, Swirl How, and the Great Carrs. The second was at a village
 called Buttermere (by the lake of the same name), up Red Pike, over High Stile
 and High Crag, and back down to the village.
