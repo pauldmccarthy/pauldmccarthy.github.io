@@ -480,3 +480,20 @@ img.maruku-png { }
     display: inline-block;
     padding-right: 5px;
 }
+
+.layout-images img {
+
+    padding-left:   1px;
+    padding-right:  1px;
+    vertical-align: top;
+}
+
+.layout-images {
+
+    display: inline-block;
+    vertical-align: middle;
+
+    padding-top:    20px;
+    padding-bottom: 20px;
+
+}
