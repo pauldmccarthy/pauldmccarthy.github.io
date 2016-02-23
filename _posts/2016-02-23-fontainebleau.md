@@ -1,6 +1,7 @@
 ---
 title: Fontainebleau
 layout: post
+picasa-album: 6254558325513371505
 ---
 
 
