@@ -7,7 +7,7 @@ picasa-album: 6317706367490803505
 A slightly belated post ... about a month ago, I went on a great trip with a
 few friends up to the Isles of Lewis and Harris, for our Outer Hebridean fix
 (now seemingly an [annual]({% post_url 2015-07-08-mingulay%})
-event</a>). Despite having two names, Lewis and Harris are actually the same
+event). Despite having two names, Lewis and Harris are actually the same
 island. They are, however, geologically separate - Lewis is a bleak, glacier
 swept landscape with thousands of lochs; whereas Harris is more mountainous in
 nature.
