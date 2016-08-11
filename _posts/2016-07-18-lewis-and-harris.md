@@ -20,8 +20,8 @@ see a single midge. Good times.
 
 The climbing on Lewis is great (we didn't end up getting anything done on
 Harris). Lewisian gneiss (nice!) - a granite-like rock which is some of the
-oldest rock in Europe, and maybe the world (I'm not sure of the details though
-- you'll have to look that up). Mostly single pitch climbing on sea
+oldest rock in Europe, and maybe the world (I'm not sure if this is entirely
+true - you'll have to look that up). Mostly single pitch climbing on sea
 cliffs. Great rock, great protection, great scenery.
 
 
