@@ -6,17 +6,19 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 
 markdown: kramdown
 
+
+s3-bucket: pauldmccarthy.github.io
+s3-region: eu-west-1
+
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
 title : small adventures
 tagline: small adventures
 author :
-  name : Paul McCarthy
-  email : pauldmccarthy@gmail.com
-  picasa : "104919338484685952203"
+  name :   Paul McCarthy
+  email :  pauldmccarthy@gmail.com
   github : pauldmccarthy
-  twitter : pauldmccarthy
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 

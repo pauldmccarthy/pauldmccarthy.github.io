@@ -475,20 +475,15 @@ img.maruku-png { }
 	color:#FFF;
 }
 
-.picasa-gallery li {
+.s3_image_gallery_item  {
     list-style-type: none;
     display: inline-block;
-    padding-right: 5px;
+    padding-left:   3px;
+    padding-right:  3px;
+    vertical-align: top; 
 }
 
-.layout-images img {
-
-    padding-left:   1px;
-    padding-right:  1px;
-    vertical-align: top;
-}
-
-.layout-images {
+.s3-strip {
 
     display: inline-block;
     vertical-align: middle;
@@ -496,4 +491,13 @@ img.maruku-png { }
     padding-top:    20px;
     padding-bottom: 20px;
 
+    horizontal-align:center;
+}    
+
+
+.s3-strip img {
+
+    padding-left:   1px;
+    padding-right:  1px;
+    vertical-align: top;
 }

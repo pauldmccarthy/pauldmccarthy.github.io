@@ -8,9 +8,8 @@
   {{ content }}
   </div>
 
-  {% if page.picasa-album %}
-  <div class="picasa-gallery" user_id="{{ site.author.picasa }}" album_id="{{ page.picasa-album }}">
-  </div>
+  {% if page.s3-album %}
+  <div id="s3-gallery"></div>
   {% endif %}
 
   <div class="prev-next">
@@ -21,6 +20,38 @@
     <a href="{{ page.previous.url }}" class="prev" title="{{ page.previous.title }}">&larr; Earlier Post</a>
   {% endif %}
   </div>
+
+  {% unless page.s3-hide %}
+  {% if page.s3-album %}
+  <script type="text/javascript">
+    $(function() {
+      $.s3_gallery("{{ site.s3-bucket }}",
+                   "{{ site.s3-region }}",
+                   "{{ page.s3-album }}",
+                   "#s3-gallery");
+    });
+  </script>
+  {% endif %}
+  {% endunless %}
+
+  <script type="text/javascript">
+    $.s3_index("{{ site.s3-bucket }}",
+               "{{ site.s3-region }}",
+               "{{ page.s3-album }}",
+               function(index) {
+        $(".s3-strip").each(function(i, elem) {
+
+            var images = $(elem).attr("images").split(";");
+    
+            $.s3_strip("{{ site.s3-bucket }}",
+                       "{{ site.s3-region }}",
+                       "{{ page.s3-album }}",
+                       index,
+                       elem,
+                       images);
+        });
+    });
+  </script>
   
 </div>
 <!-- End Page -->
