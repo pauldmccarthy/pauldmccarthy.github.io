@@ -2,7 +2,7 @@
 
     // Retrieves the album index, passes
     // it to the provided callback.
-    $.s3_album = function(bucket, region, album, callback) {
+    $.s3_index = function(bucket, region, album, callback) {
 
         // var indexUrl = "file:///Users/paulmc/pauldmccarthy.github.com/photos/" +
         //               album  + ".json?callback=?";
@@ -23,21 +23,30 @@
             }});
     };
 
+    $.s3_image_url = function(bucket,
+                              region,
+                              album,
+                              image,
+                              width,
+                              height) {
 
-    // Returns  a url to an appropriately sized 
-    // image to the provided callback.
-    $.s3_image = function(bucket,
-                          region,
-                          album,
-                          image,
-                          index,
-                          maxwidth,
-                          maxheight) {
+        var imgName = image.substr(0, image.lastIndexOf("."));
+        var imgSuf  = image.substr(   image.lastIndexOf("."));
+        // var imgUrl  = "http://"         + bucket  +
+        //               ".s3-"            + region  +
+        //               ".amazonaws.com/" + album   +
+        //               "/"               + imgName +
+        //               "_" + width + "_" + height + imgSuf;
 
-        if (!(image in index)) {
-            return undefined;
-        }
+        var imgUrl  = "http://localhost:8000/"   + album  +
+                      "/"                        + imgName +
+                      "_" + width + "_" + height + imgSuf;
+        
+        return imgUrl;
+    };
 
+    $.s3_best_size = function(image, index, maxwidth, maxheight) {
+        
         var sizes = index[image];
 
         // Sort the sizes into decreasing order
@@ -65,25 +74,35 @@
             besth = sizes[sizes.length - 1][1];
         }
 
-        var imgName = image.substr(0, image.lastIndexOf("."));
-        var imgSuf  = image.substr(   image.lastIndexOf("."));
-        // var imgUrl  = "http://"         + bucket  +
-        //               ".s3-"            + region  +
-        //               ".amazonaws.com/" + album   +
-        //               "/"               + imgName +
-        //               "_" + bestw + "_" + besth + imgSuf;
+        return [bestw, besth];
+    };
 
-        var imgUrl  = "http://localhost:8000/" + album  +
-                      "/"                      + imgName +
-                      "_" + bestw + "_" + besth + imgSuf;
 
-        
-        return imgUrl;
+    // Returns  a url to an appropriately sized 
+    // image to the provided callback.
+    $.s3_image = function(bucket,
+                          region,
+                          album,
+                          image,
+                          index,
+                          maxwidth,
+                          maxheight) {
+
+        if (!(image in index)) {
+            return undefined;
+        }
+
+        var bestw;
+        var besth;
+
+        [bestw, besth] = $.s3_best_size(image, index, maxwidth, maxheight);
+        return $.s3_image_url(bucket, region, album, image, bestw, besth);
+
     };
 
     $.s3_gallery = function(bucket, region, album, elemid) {
 
-        $.s3_album(bucket, region, album, function(index) {
+        $.s3_index(bucket, region, album, function(index) {
 
             var thumbUrls = $.map(index, function(sizes, image) {
                 return $.s3_image(bucket, region, album, image, index, 1, 1);
@@ -98,7 +117,7 @@
 
             var $elem = $(elemid);
 
-            var $ul = $("<ul class=\"s3_gallery\"></ul>");
+            var $ul = $("<ul class=\"s3_gallery_list\"></ul>");
 
             $.each(thumbUrls, function(i) {
 
@@ -142,16 +161,20 @@
         var elWidth  = $elem.parent().width();
         var elHeight = visHeight($elem.parent());
         var rowWidth = elWidth;
- 
-        var imgUrls = images.map(function(image) {
-            return $.s3_image(
+
+        var thumbSizes = images.map(function(i) {
+            return $.s3_best_size(i, index, rowWidth / images.length, 99999);});
+
+        var thumbWidths  = thumbSizes.map(function(s) { return s[0]; });
+        var thumbHeights = thumbSizes.map(function(s) { return s[1]; });
+        var thumbUrls    = images.map(function(image, i) {
+            return $.s3_image_url(
                 bucket,
                 region,
                 album,
                 image,
-                index,
-                rowWidth / images.length,
-                99999);
+                thumbWidths[i],
+                thumbHeights[i]);
         });
         
         var fullUrls = images.map(function(image) {
@@ -170,29 +193,22 @@
         // see screen.css
         rowWidth -= 4 * images.length;
 
-        var imgWidths  = images.map(function(e) { return e.width;  });
-        var imgHeights = images.map(function(e) { return e.height; });
+        // resize images so they fit horizontally
+        var ttlWidth = thumbWidths.reduce( function(a, b) { return a + b; });
 
-        // shrink images so they fit horizontally
-        var ttlWidth = imgWidths.reduce( function(a, b) { return a + b; });
-        if (ttlWidth > rowWidth) {
-            
-            var shrink = 1.0 * rowWidth / ttlWidth;
-            for (var i = 0; i < images.length; i++) {
+        for (var i = 0; i < images.length; i++) {
 
-                imgWidths[ i] *= shrink;
-                imgHeights[i] *= shrink;
-            };
+            thumbWidths[ i] *= rowWidth / ttlWidth;
+            thumbHeights[i] *= rowWidth / ttlWidth;
         };
 
-        imgUrls.map(function(imgUrl, i) {
+        thumbUrls.map(function(imgUrl, i) {
 
             var $a   = $("<a class=\"s3_image_strip_link\"></a>").attr("href", fullUrls[i]);
-            var $img = $("<img/>", {
-                src    : imgUrl,
-                width  : imgWidths[ i],
-                height : imgHeights[i]
-            });
+            var $img = $("<img/>")
+                .attr("src",    imgUrl)
+                .attr("width",  thumbWidths[i])
+                .attr("height", thumbHeights[i]);
 
             $a.append($img)
 
