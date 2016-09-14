@@ -1,0 +1,44 @@
+Making an s3 bucket publicly readable
+=====================================
+
+You need to add 'list' permission to 'Everyone'. Then use this 
+policy to make all objects in the bucket accessible.
+
+{
+  "Version":"2012-10-17",
+  "Statement":[
+    {
+      "Sid":"AddPerm",
+      "Effect":"Allow",
+      "Principal": "*",
+      "Action":["s3:ListBucket",
+                "s3:GetObject"],
+      "Resource":["arn:aws:s3:::bucket-name/*"]
+    }
+  ]
+}
+
+
+
+Granting an IAM user read/write access to a s3 bukket via aws CLI
+=================================================================
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["s3:ListBucket"],
+      "Resource": ["arn:aws:s3:::bucket-name"]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:DeleteObject"
+      ],
+      "Resource": ["arn:aws:s3:::bucket-name/*"]
+    }
+  ]
+}
