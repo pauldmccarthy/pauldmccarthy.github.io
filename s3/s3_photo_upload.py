@@ -309,7 +309,7 @@ def parseArgs(argv=None):
         raise RuntimeError('{} is not a directory'.format(namespace.album))
 
     if namespace.album_name is None:
-        namespace.album_name = op.basename(namespace.album)
+        namespace.album_name = op.basename(namespace.album.strip(op.sep))
 
     if namespace.default_sizes:
         namespace.photo_size = [140, 400, 600, 700, 800, 1000, 1200, 1400, 1600]

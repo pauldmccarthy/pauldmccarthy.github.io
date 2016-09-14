@@ -1,6 +1,6 @@
 (function($) {
 
-    var local_s3_store = true;
+    var local_s3_store = false;
 
     // Retrieves the album index, passes
     // it to the provided callback.
