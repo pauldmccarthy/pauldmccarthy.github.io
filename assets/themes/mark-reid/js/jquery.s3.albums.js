@@ -1,17 +1,22 @@
 (function($) {
 
+    var local_s3_store = true;
+
     // Retrieves the album index, passes
     // it to the provided callback.
     $.s3_index = function(bucket, region, album, callback) {
 
-        // var indexUrl = "file:///Users/paulmc/pauldmccarthy.github.com/photos/" +
-        //               album  + ".json?callback=?";
+        var indexUrl;
 
-         var indexUrl = "http://localhost:8000/" + album  + ".json?callback=?"; 
+        if (local_s3_store) {
+            indexUrl = "http://localhost:8000/" + album  + ".json?callback=?";
+        }
 
-        //var indexUrl = "http://"         + bucket +
-        //               ".s3-"            + region +
-        //               ".amazonaws.com/" + album  + ".json?callback=?";
+        else {
+        indexUrl = "http://"         + bucket +
+                   ".s3-"            + region +
+                   ".amazonaws.com/" + album  + ".json?callback=?";
+        }
 
         $.ajax({
             url           : indexUrl,
@@ -32,15 +37,22 @@
 
         var imgName = image.substr(0, image.lastIndexOf("."));
         var imgSuf  = image.substr(   image.lastIndexOf("."));
-        // var imgUrl  = "http://"         + bucket  +
-        //               ".s3-"            + region  +
-        //               ".amazonaws.com/" + album   +
-        //               "/"               + imgName +
-        //               "_" + width + "_" + height + imgSuf;
+        var imgUrl; 
 
-        var imgUrl  = "http://localhost:8000/"   + album  +
-                      "/"                        + imgName +
+        if (local_s3_store) {
+
+            imgUrl = "http://localhost:8000/"   + album  +
+                     "/"                        + imgName +
+                     "_" + width + "_" + height + imgSuf;
+        }
+        else {  
+            imgUrl  = "http://"         + bucket  +
+                      ".s3-"            + region  +
+                      ".amazonaws.com/" + album   +
+                      "/"               + imgName +
                       "_" + width + "_" + height + imgSuf;
+        }
+
         
         return imgUrl;
     };
