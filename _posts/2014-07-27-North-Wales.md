@@ -1,7 +1,7 @@
 ---
 title: North Wales
 layout: post
-picasa-album: 6040839055267466577
+s3-album: 2014-07-27-North-Wales
 ---
 
 Seven days straight, climbing with friends in the mountains of North Wales,
