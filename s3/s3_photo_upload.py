@@ -6,7 +6,7 @@
 #
 """Upload a collection of photos, and resized versions of them, to a s3
 bucket, naming the photos according to a standard convention.  Also upload a
-text file containing a list of the photos that were uploaded.
+json file containing a list of the photos that were uploaded.
 
 
 For example, given a directory containing the following:
@@ -45,7 +45,7 @@ Where:
  - Files named *-X3_Y3.jpg have a maximum width/height of 800 pixels.
  - album-name.json contains the following:
 
-   {
+   jsonp({
      "1.jpg" : [[X0, Y0],
                 [X1, Y1],
                 [X2, Y2],
@@ -58,7 +58,7 @@ Where:
                 [X1, Y1],
                 [X2, Y2],
                 [X3, Y3]], 
-    }
+    })
 
 The resized images are sized so that their dimensions do not exceed the
 requested width/height.
@@ -312,7 +312,9 @@ def parseArgs(argv=None):
         namespace.album_name = op.basename(namespace.album.strip(op.sep))
 
     if namespace.default_sizes:
-        namespace.photo_size = [140, 400, 600, 700, 800, 1000, 1200, 1400, 1600]
+        namespace.photo_size =  [94,   110,  128, 200, 220, 288, 320,  400,
+                                 512,  576,  640, 720, 800, 912, 1024, 1152,
+                                 1280, 1440, 1600]
 
     # Only the original size image will be uploaded
     elif namespace.photo_size is None:
