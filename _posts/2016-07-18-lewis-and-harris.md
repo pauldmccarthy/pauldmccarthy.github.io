@@ -1,7 +1,7 @@
 ---
-title: Lewis and Harris
-layout: post
-picasa-album: 6317706367490803505
+title:    Lewis and Harris
+layout:   post
+s3-album: 2016-07-18-lewis-and-harris
 ---
 
 A slightly belated post ... about a month ago, I went on a great trip with a
@@ -29,10 +29,3 @@ But I don't think I'll remember this trip for the climbing. I have been
 telling everyone (not just climbers) that they must visit Lewis and Harris -
 it's such an amazing part of the world; you'll feel like you're thousands of
 miles away from your everyday life. It's a beautiful place.
-
-
-(<a href="https://goo.gl/photos/CVyo9L8zoCJj88NG6">Link to photos</a>; thanks
-Kyle for pics 5 and 7. Google has seemingly made it impossible to change the
-sharing settings of a google photos album so that it will work with the
-picasaweb API. In other words, I need to update the code that runs this
-website).

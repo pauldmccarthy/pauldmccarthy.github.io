@@ -1,7 +1,7 @@
 ---
 title: Fontainebleau
 layout: post
-picasa-album: 6254558325513371505
+s3-album: 2016-02-23-fontainebleau
 ---
 
 
