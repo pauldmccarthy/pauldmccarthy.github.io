@@ -1,5 +1,8 @@
 (function($) {
 
+    // set to true to retrieve photos 
+    // from localhost:8000, false
+    // to retrieve them from s3
     var local_s3_store = false;
 
     // Retrieves the album index, passes
@@ -57,9 +60,13 @@
         return imgUrl;
     };
 
-    $.s3_best_size = function(image, index, maxwidth, maxheight) {
+
+    // Try to match the desired width/height on area
+    $.s3_best_size = function(image, index, width, height) {
         
         var sizes = index[image];
+
+        var area  = width * height;
 
         // Sort the sizes into decreasing order
         sizes.sort(function(s1, s2) { return s1[0] > s2[0] ? -1 : s1[0] < s2[0] ? 1 : 0});
@@ -71,8 +78,9 @@
 
             var w = sizes[i][0];
             var h = sizes[i][1];
+            var a = w * h;
 
-            if (w <= maxwidth && h <= maxheight) {
+            if (a < area) {
                 bestw = w;
                 besth = h;
                 break;
@@ -170,12 +178,13 @@
 
         var $elem = $(elem);
 
-        var elWidth  = $elem.parent().width();
-        var elHeight = visHeight($elem.parent());
-        var rowWidth = elWidth;
+        var elWidth   = $elem.parent().width();
+        var elHeight  = visHeight($elem.parent());
+        var rowWidth  = elWidth;
+        var bestWidth = rowWidth  / (images.length - 1);
 
         var thumbSizes = images.map(function(i) {
-            return $.s3_best_size(i, index, rowWidth / images.length, 99999);});
+            return $.s3_best_size(i, index, bestWidth, bestWidth);});
 
         var thumbWidths  = thumbSizes.map(function(s) { return s[0]; });
         var thumbHeights = thumbSizes.map(function(s) { return s[1]; });

@@ -478,8 +478,8 @@ img.maruku-png { }
 .s3_image_gallery_item  {
     list-style-type: none;
     display: inline-block;
-    padding-left:   3px;
-    padding-right:  3px;
+    padding-left:   1px;
+    padding-right:  1px;
     vertical-align: top; 
 }
 

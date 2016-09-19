@@ -91,6 +91,10 @@ from PIL import Image, ExifTags
 FILE_TYPES = ['.jpg', '.png']
 FILE_TYPES = FILE_TYPES + [ft.upper() for ft in FILE_TYPES]
 
+DEFAULT_SIZES = [110,  128, 200, 220, 288, 320,  400,
+                 512,  576,  640, 720, 800, 912, 1024, 1152,
+                 1280, 1440, 1600]
+
 
 def main(argv=None):
 
@@ -299,8 +303,8 @@ def parseArgs(argv=None):
     sizes.add_argument('-s', '--photo_size', type=int, action='append',
                         help='Resize resolution')
     sizes.add_argument('-d', '--default_sizes', action='store_true',
-                       help='Use a default set of sizes (140, 400, '
-                            '600, 800, 1000, 1200, 1400, 1600)')
+                       help='Use a default set of sizes ({})'.format(
+                           '\n'.join(map(str, DEFAULT_SIZES))))
 
     namespace = parser.parse_args()
 
@@ -312,9 +316,7 @@ def parseArgs(argv=None):
         namespace.album_name = op.basename(namespace.album.strip(op.sep))
 
     if namespace.default_sizes:
-        namespace.photo_size =  [94,   110,  128, 200, 220, 288, 320,  400,
-                                 512,  576,  640, 720, 800, 912, 1024, 1152,
-                                 1280, 1440, 1600]
+        namespace.photo_size = DEFAULT_SIZES
 
     # Only the original size image will be uploaded
     elif namespace.photo_size is None:
