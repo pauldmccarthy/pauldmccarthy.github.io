@@ -60,13 +60,9 @@
         return imgUrl;
     };
 
-
-    // Try to match the desired width/height on area
-    $.s3_best_size = function(image, index, width, height) {
+    $.s3_best_size = function(image, index, width, height, criteria) {
         
         var sizes = index[image];
-
-        var area  = width * height;
 
         // Sort the sizes into decreasing order
         sizes.sort(function(s1, s2) { return s1[0] > s2[0] ? -1 : s1[0] < s2[0] ? 1 : 0});
@@ -78,9 +74,8 @@
 
             var w = sizes[i][0];
             var h = sizes[i][1];
-            var a = w * h;
 
-            if (a < area) {
+            if (criteria(w, h, width, height)) {
                 bestw = w;
                 besth = h;
                 break;
@@ -96,6 +91,29 @@
 
         return [bestw, besth];
     };
+
+
+    // Try to match the desired width/height on area
+    $.s3_best_size_by_area = function(image, index, width, height) {
+        
+        return $.s3_best_size(
+            image, index, width, height, function(
+                iw, ih, dw, dh) {
+
+                return iw * ih < dw * dh;
+        });
+    };
+
+    // Try to match the desired width/height on max width/height
+    $.s3_best_size_by_max = function(image, index, width, height) {
+        
+        return $.s3_best_size(
+            image, index, width, height, function(
+                iw, ih, dw, dh) {
+
+                return iw <= dw && ih <= dh;
+        });
+    }; 
 
 
     // Returns  a url to an appropriately sized 
@@ -115,7 +133,7 @@
         var bestw;
         var besth;
 
-        [bestw, besth] = $.s3_best_size(image, index, maxwidth, maxheight);
+        [bestw, besth] = $.s3_best_size_by_max(image, index, maxwidth, maxheight);
         return $.s3_image_url(bucket, region, album, image, bestw, besth);
 
     };
@@ -184,7 +202,7 @@
         var bestWidth = rowWidth  / (images.length - 1);
 
         var thumbSizes = images.map(function(i) {
-            return $.s3_best_size(i, index, bestWidth, bestWidth);});
+            return $.s3_best_size_by_area(i, index, bestWidth, bestWidth);});
 
         var thumbWidths  = thumbSizes.map(function(s) { return s[0]; });
         var thumbHeights = thumbSizes.map(function(s) { return s[1]; });
