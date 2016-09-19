@@ -19,6 +19,6 @@ much to inspire me in Oxford, when compared to places like this.
 
 
 Aside from the climbing, perhaps the nicest part of the trip was the constant
-noise of cow bells while we were climbing at ... on our last day of the
-trip. I'm pretty sure I would be happy to spend the rest of my life with that
-noise in the background.
+noise of cow bells on our last day of the trip while climbing at a crag called
+Hintisberg, near Interlaken. I'm pretty sure I would be happy to spend the
+rest of my life with that noise in the background.
