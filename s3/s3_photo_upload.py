@@ -57,7 +57,7 @@ Where:
      "3.jpg" : [[X0, Y0],
                 [X1, Y1],
                 [X2, Y2],
-                [X3, Y3]], 
+                [X3, Y3]],
     })
 
 The resized images are sized so that their dimensions do not exceed the
@@ -104,7 +104,7 @@ def main(argv=None):
 
     if namespace.local is not None: copyLocal(namespace, albumDir, index)
     else:                           copyToS3( namespace, albumDir, index)
-    
+
     shutil.rmtree(workspace)
     os.remove(    index)
 
@@ -146,7 +146,7 @@ def prepareImage(namespace, albumDir, imageFile):
 
     # Thanks http://stackoverflow.com/a/6218425
     try:
-        for okey in ExifTags.TAGS.keys(): 
+        for okey in ExifTags.TAGS.keys():
             if ExifTags.TAGS[okey] == 'Orientation':
                 break
 
@@ -158,7 +158,7 @@ def prepareImage(namespace, albumDir, imageFile):
     if   orient == 3: image = image.rotate(180, expand=True)
     elif orient == 6: image = image.rotate(270, expand=True)
     elif orient == 8: image = image.rotate(90,  expand=True)
- 
+
     ow, oh    = image.size
     allImages = []
     allSizes  = []
@@ -171,33 +171,33 @@ def prepareImage(namespace, albumDir, imageFile):
         if ow == oh:
             rw = size
             rh = size
-            
+
         elif ow > oh:
             rw = min(ow, size)
             rh = rw * (oh / float(ow))
-            
+
         elif ow < oh:
             rh = min(ow, size)
             rw = rh * (ow / float(oh))
 
         rw      = int(round(rw))
         rh      = int(round(rh))
-        resized = image.resize((rw, rh))
+        resized = image.resize((rw, rh), resample=Image.LANCZOS)
 
         allSizes .append([rw, rh])
         allImages.append(resized)
 
     allImages.append(image)
     allSizes .append([ow, oh])
-        
+
     prefix, suffix = op.splitext(op.basename(imageFile))
 
     print('  {} ...'.format(imageFile), end='')
 
     allImageFiles = []
-    
+
     for image in allImages:
-        
+
         w, h     = image.size
         fileName = '{}_{}_{}{}'.format(prefix, w, h, suffix)
         fileName = op.join(albumDir, fileName)
@@ -207,7 +207,7 @@ def prepareImage(namespace, albumDir, imageFile):
         allImageFiles.append(fileName)
 
         image.save(fileName)
-        
+
     print()
 
     return allSizes, allImageFiles
@@ -243,7 +243,7 @@ def copyToS3(namespace, albumDir, fileIndex):
 
     if sp.call(cmd1.split(), stdin=sys.stdin, stdout=sys.stdout) != 0:
         raise RuntimeError('Command failed: {}'.format(cmd1))
-    
+
     if sp.call(cmd2.split(), stdin=sys.stdin, stdout=sys.stdout) != 0:
         raise RuntimeError('Command failed: {}'.format(cmd2))
 
@@ -259,20 +259,20 @@ def copyLocal(namespace, albumDir, fileIndex):
 
     if sp.call(cmd1.split(), stdin=sys.stdin, stdout=sys.stdout) != 0:
         raise RuntimeError('Command failed: {}'.format(cmd1))
-    
+
     if sp.call(cmd2.split(), stdin=sys.stdin, stdout=sys.stdout) != 0:
-        raise RuntimeError('Command failed: {}'.format(cmd2)) 
+        raise RuntimeError('Command failed: {}'.format(cmd2))
 
 
 def parseArgs(argv=None):
-    
+
     if argv is None:
         argv = sys.argv[1:]
 
     description = 'Upload photos to a s3 bucket'
     epilog      = textwrap.dedent("""
     Supported file types: {}
-    
+
     s3_photo_upload.py assumes that aws cli has been installed and correctly
     configured.
     """.format(', '.join(FILE_TYPES)))
@@ -299,7 +299,7 @@ def parseArgs(argv=None):
                              'REDUCED_REDUNDANCY)')
 
     sizes = parser.add_mutually_exclusive_group()
-    
+
     sizes.add_argument('-s', '--photo_size', type=int, action='append',
                         help='Resize resolution')
     sizes.add_argument('-d', '--default_sizes', action='store_true',
@@ -329,7 +329,7 @@ def parseArgs(argv=None):
                                'exist'.format(namespace.local))
 
     return namespace
-    
+
 
 if __name__ == '__main__':
     main()
