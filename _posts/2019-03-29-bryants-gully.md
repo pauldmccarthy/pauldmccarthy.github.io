@@ -8,7 +8,7 @@ s3-hide:  true
 Even though I really hate the regular 4 hour drive down to Oxford, North Wales
 is a damned fine place to live. In addition to an abundance of rock climbing
 and bouldering (the reason I moved up here about a year ago), the hiking,
-running and scrambling[^*] opportunities are plentiful.
+running and scrambling[^1] opportunities are plentiful.
 
 
 Here is an example. The sun was out on Friday, so I decided to take the
@@ -61,8 +61,8 @@ in an afternoon.
 
 
 
-[^*] _Scrambling_ is low grade rock climbing which can often be done in hiking
-or running shoes. I've really gotten into it since moving to North Wales,
-because it allows me to combine trail running with climbing, and there are
-loads of scrambles which can easily be done in a couple of hours from my
+[^1]: _Scrambling_ is low grade rock climbing which can often be done in
+hiking or running shoes. I've really gotten into it since moving to North
+Wales, because it allows me to combine trail running with climbing, and there
+are loads of scrambles which can easily be done in a couple of hours from my
 house.
