@@ -62,7 +62,7 @@ in an afternoon.
 
 
 [^1]: _Scrambling_ is low grade rock climbing which can often be done in
-hiking or running shoes. I've really gotten into it since moving to North
-Wales, because it allows me to combine trail running with climbing, and there
-are loads of scrambles which can easily be done in a couple of hours from my
-house.
+      hiking or running shoes. I've really gotten into it since moving to
+      North Wales, because it allows me to combine trail running with
+      climbing, and there are loads of scrambles which can easily be done in a
+      couple of hours from my house.
