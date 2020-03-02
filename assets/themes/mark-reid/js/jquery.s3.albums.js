@@ -1,6 +1,6 @@
 (function($) {
 
-    // set to true to retrieve photos 
+    // set to true to retrieve photos
     // from localhost:8000, false
     // to retrieve them from s3
     var local_s3_store = false;
@@ -16,7 +16,7 @@
         }
 
         else {
-        indexUrl = "http://"         + bucket +
+        indexUrl = "https://"        + bucket +
                    ".s3-"            + region +
                    ".amazonaws.com/" + album  + ".json?callback=?";
         }
@@ -40,7 +40,7 @@
 
         var imgName = image.substr(0, image.lastIndexOf("."));
         var imgSuf  = image.substr(   image.lastIndexOf("."));
-        var imgUrl; 
+        var imgUrl;
 
         if (local_s3_store) {
 
@@ -48,20 +48,20 @@
                      "/"                        + imgName +
                      "_" + width + "_" + height + imgSuf;
         }
-        else {  
-            imgUrl  = "http://"         + bucket  +
+        else {
+            imgUrl  = "https://"        + bucket  +
                       ".s3-"            + region  +
                       ".amazonaws.com/" + album   +
                       "/"               + imgName +
                       "_" + width + "_" + height + imgSuf;
         }
 
-        
+
         return imgUrl;
     };
 
     $.s3_best_size = function(image, index, width, height, criteria) {
-        
+
         var sizes = index[image];
 
         // Sort the sizes into decreasing order
@@ -95,7 +95,7 @@
 
     // Try to match the desired width/height on area
     $.s3_best_size_by_area = function(image, index, width, height) {
-        
+
         return $.s3_best_size(
             image, index, width, height, function(
                 iw, ih, dw, dh) {
@@ -106,17 +106,17 @@
 
     // Try to match the desired width/height on max width/height
     $.s3_best_size_by_max = function(image, index, width, height) {
-        
+
         return $.s3_best_size(
             image, index, width, height, function(
                 iw, ih, dw, dh) {
 
                 return iw <= dw && ih <= dh;
         });
-    }; 
+    };
 
 
-    // Returns  a url to an appropriately sized 
+    // Returns  a url to an appropriately sized
     // image to the provided callback.
     $.s3_image = function(bucket,
                           region,
@@ -151,7 +151,7 @@
                     bucket, region, album, image, index,
                     $(window).width()  - 50,
                     $(window).height() - 50);
-            }); 
+            });
 
             var $elem = $(elemid);
 
@@ -178,12 +178,12 @@
                 loop: true,
                 resizeDuration: 1,
                 imageFadeDuration: 1
-            }); 
+            });
         });
     };
 
     $.s3_strip = function(bucket, region, album, index, elem, images) {
-        
+
         // gaargh, it should be easier to
         // get the visible size of an element.
         // Thanks http://stackoverflow.com/a/26831113
@@ -215,7 +215,7 @@
                 thumbWidths[i],
                 thumbHeights[i]);
         });
-        
+
         var fullUrls = images.map(function(image) {
             return $.s3_image(
                 bucket,
@@ -224,7 +224,7 @@
                 image,
                 index,
                 $(window).width()  - 50,
-                $(window).height() - 50); 
+                $(window).height() - 50);
         });
 
         // Allow space for 2px padding
