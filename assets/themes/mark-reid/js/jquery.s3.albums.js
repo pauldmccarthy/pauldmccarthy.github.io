@@ -16,7 +16,7 @@
         }
 
         else {
-            indexUrl = "https://"        + bucket.replaace('.', '-') +
+            indexUrl = "https://"        + bucket.replace('.', '-') +
                        ".s3-"            + region +
                        ".amazonaws.com/" + album  + ".json?callback=?";
         }
@@ -49,7 +49,7 @@
                      "_" + width + "_" + height + imgSuf;
         }
         else {
-            imgUrl  = "https://"        + bucket.replaace('.', '-')  +
+            imgUrl  = "https://"        + bucket.replace('.', '-')  +
                       ".s3-"            + region  +
                       ".amazonaws.com/" + album   +
                       "/"               + imgName +
