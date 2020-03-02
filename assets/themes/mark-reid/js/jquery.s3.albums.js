@@ -16,9 +16,9 @@
         }
 
         else {
-        indexUrl = "https://"        + bucket +
-                   ".s3-"            + region +
-                   ".amazonaws.com/" + album  + ".json?callback=?";
+            indexUrl = "https://"        + bucket.replaace('.', '-') +
+                       ".s3-"            + region +
+                       ".amazonaws.com/" + album  + ".json?callback=?";
         }
 
         $.ajax({
@@ -49,7 +49,7 @@
                      "_" + width + "_" + height + imgSuf;
         }
         else {
-            imgUrl  = "https://"        + bucket  +
+            imgUrl  = "https://"        + bucket.replaace('.', '-')  +
                       ".s3-"            + region  +
                       ".amazonaws.com/" + album   +
                       "/"               + imgName +
