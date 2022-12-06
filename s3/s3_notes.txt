@@ -1,7 +1,39 @@
+Your s3 bucket details:
+
+s3-bucket: pauldmccarthy-github-io
+s3-region: eu-west-1
+
+You need a python env with pillow and awscli to run the photo uploader.
+
+You need to store your AWS configuration in:
+~/.aws/config:
+  [default]
+  region=eu-west-1
+~/.aws/credentials:
+  [default]
+  aws_access_key_id=XX
+  aws_secret_access_key=XX
+
+If you lose your access key, you can create a new one via the AWS console.
+
+To create a new post:
+
+1. Add the md file to _posts
+2. Prepare a directory containing all of the images
+3. Run s3_photo_upload.py, e.g.:
+    python s3_photo_upload.py     \
+      pauldmccarthy-github-io     \
+      ./pictures/                 \
+      -d                          \ # to generate default pic sizes
+      -n 2022-12-06-indian-creek    # same as listed in markdown file
+
+
+
+
 Making an s3 bucket publicly readable
 =====================================
 
-You need to add 'list' permission to 'Everyone'. Then use this 
+You need to add 'list' permission to 'Everyone'. Then use this
 policy to make all objects in the bucket accessible.
 
 {

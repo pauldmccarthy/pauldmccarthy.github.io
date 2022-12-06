@@ -77,6 +77,7 @@ import os.path    as op
 import               sys
 import               glob
 import               json
+import               shlex
 import               shutil
 import               tempfile
 import               argparse
@@ -241,10 +242,10 @@ def copyToS3(namespace, albumDir, fileIndex):
         namespace.album_name,
         namespace.s3args)
 
-    if sp.call(cmd1.split(), stdin=sys.stdin, stdout=sys.stdout) != 0:
+    if sp.call(shlex.split(cmd1), stdin=sys.stdin, stdout=sys.stdout) != 0:
         raise RuntimeError('Command failed: {}'.format(cmd1))
 
-    if sp.call(cmd2.split(), stdin=sys.stdin, stdout=sys.stdout) != 0:
+    if sp.call(shlex.split(cmd2), stdin=sys.stdin, stdout=sys.stdout) != 0:
         raise RuntimeError('Command failed: {}'.format(cmd2))
 
 
@@ -314,6 +315,9 @@ def parseArgs(argv=None):
 
     if namespace.album_name is None:
         namespace.album_name = op.basename(namespace.album.strip(op.sep))
+
+    if namespace.s3args is None:
+        namespace.s3args = '--storage-class REDUCED_REDUNDANCY'
 
     if namespace.default_sizes:
         namespace.photo_size = DEFAULT_SIZES
