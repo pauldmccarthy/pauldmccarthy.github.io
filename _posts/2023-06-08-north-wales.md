@@ -34,7 +34,7 @@ few years, I feel like I've become much more aware of the risks associated
 with rock climbing, and much less inclined to attempt bold or dangeorous
 routes (although I've always been a bit of a wuss, to be honest). But I do
 love the thrill of fighting my way up a physically challenging, but well
-protected trad climbs.
+protected trad climb.
 
 <div class="s3-strip" images="3.jpg"> </div> <sup>Contorting my way up Foil
 (E3 6a), at Dinas Cromlech.</sup>
