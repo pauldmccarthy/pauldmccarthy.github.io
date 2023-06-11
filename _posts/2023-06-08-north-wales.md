@@ -31,7 +31,7 @@ Cwmglas.</sup>
 
 After having a couple of nasty (but thankfully minor) injuries over the past
 few years, I feel like I've become much more aware of the risks associated
-with rock climbing, and much less inclined to attempt bold or dangeorous
+with rock climbing, and much less inclined to attempt bold or dangerous
 routes (although I've always been a bit of a wuss, to be honest). But I do
 love the thrill of fighting my way up a physically challenging, but well
 protected trad climb.
