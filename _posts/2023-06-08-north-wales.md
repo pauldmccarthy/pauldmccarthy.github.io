@@ -26,7 +26,7 @@ top it off, there is an amazing community of strong, friendly and active
 outdoorsy types.
 
 <div class="s3-strip" images="2.jpg"> </div> <sup>My friend Dave excited at
-the prospect of getting stuck into Fear of Infection (E4 6a), at Clogwyn Mawr
+the prospect of getting stuck in[to] Fear of Infection (E4 6a), at Clogwyn Mawr
 Cwmglas.</sup>
 
 After having a couple of nasty (but thankfully minor) injuries over the past
