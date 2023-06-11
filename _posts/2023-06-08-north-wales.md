@@ -17,7 +17,7 @@ Arddu.</sup>
 After missing the last two summers due to injury (broken finger in 2021,
 dislocated elbow in 2022), I've been very lucky to have had a relatively long
 spell without injuring myself, and have been immersing myself in the climbing
-around my home in Llanberis<sup>1</sup>.
+around my home in Llanberis.
 
 While it may not be the world's best rock climbing destination, nor have the
 world's best weather, North Wales does have an incredible concentration of
@@ -49,5 +49,5 @@ Left Wall (E2 5c); high up and alone on Resurrection (E4 6a).</sup>
 I'm not sure how long I'll be in North Wales for, but there are definitely
 worse places to be, and I'm quite content for the time being.
 
-<sup>1</sup> All of the climbs mentioned in this post were accessed from my
-home by foot, bicycle, or public transport.
+<sup>All of the climbs mentioned in this post were accessed from my
+home by foot, bicycle, or public transport.</sup>
