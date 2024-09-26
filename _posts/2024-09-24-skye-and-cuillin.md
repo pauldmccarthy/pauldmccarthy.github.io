@@ -39,22 +39,22 @@ Tthe most complicated part of the traverse for me ended up being the descent fro
 
 At about 6:30, feeling very fatigued, I staggered up Sgurr nan Gillean, the final peak of the traverse. I then retraced my steps to Bealach nan Lice, ran down Fionn Choire<sup>7</sup>, and made it out to the road at about 8pm, just as dark was setting in. From here I had banked on being able to hitch a lift back to Glenbrittle, but nobody was driving down at that time, so I ran all the way back to my car - the longest 5km road run I've done in a very long time!
 
-<div class="s3-strip" images="ridge_4.jpg;ridge_5.jpg;ridge_6.jpg"> </div>
+<div class="s3-strip" images="ridge_10.jpg;ridge_11.jpg;ridge_12.jpg"> </div>
 
 
 Skye is an an incredible place, and I feel very lucky to have had such a great week with good friends and good weather.
 
 
-> <sup>1</sup> The Dubh Slabs were made famous a few years back when Danny Macaskill [rode his mountain bike down them!](https://www.youtube.com/watch?v=4Ym2F-tHdkk) The slabs are very easy to climb (little more than low grade scrambling), but riding down them on a bike is pure insanity.
+> <sup>1 The Dubh Slabs were made famous a few years back when Danny Macaskill [rode his mountain bike down them!](https://www.youtube.com/watch?v=4Ym2F-tHdkk) The slabs are very easy to climb (little more than low grade scrambling), but riding down them on a bike is pure insanity.</sup>
 
-> <sup>2</sup> _Sgurr_ - Gaelic for a sharp or jagged peak. Sron na Ciche is home to _The Cioch_, an impressive prow of rock jutting out from the cliff, which was [the location for a scene in Highlander](https://www.youtube.com/watch?v=Uy6hpCVIgo8). Apparently somebody had stashed a couple of plastic swords up there at some point in the past in order to re-create the scene, but Dave wasn't able to find them.
+> <sup>2 _Sgurr_ - Gaelic for a sharp or jagged peak. Sron na Ciche is home to _The Cioch_, an impressive prow of rock jutting out from the cliff, which was [the location for a scene in Highlander](https://www.youtube.com/watch?v=Uy6hpCVIgo8). Apparently somebody had stashed a couple of plastic swords up there at some point in the past in order to re-create the scene, but Dave wasn't able to find them.</sup>
 
-> <sup>3</sup> HVS (_Hard Very Severe_) is about Ewbank grade 18, VD (_Very Difficult_) about grade 10, and VS (_Very Severe_) about grade 16.
+> <sup>3 HVS (_Hard Very Severe_) is about Ewbank grade 18, VD (_Very Difficult_) about grade 10, and VS (_Very Severe_) about grade 16.</sup>
 
-> <sup>4</sup> This doesn't include the initial ~1000m/7km hike to reach Gars-bheinn, the southern-most peak on the ridge, and the traditional starting point of the traverse.
+> <sup>4 This doesn't include the initial ~1000m/7km hike to reach Gars-bheinn, the southern-most peak on the ridge, and the traditional starting point of the traverse.</sup>
 
-> <sup>5</sup> I opted to skip the TD gap (instead I walked underneath Sgurr Alasdair, and climbed up its West ridge), King's Chimney (I traversed across Collie's ledge instead), the Inaccessible Pinnacle (I had hoped to do this, but there were two parties queueing for it when I arrived, and I couldn't be bothered waiting), and Naismith's route on Basteir Tooth (instead, I walked underneath Am Bastier, and scrambled up and down its East ridge).
+> <sup>5 I opted to skip the TD gap (instead I walked underneath Sgurr Alasdair, and climbed up its West ridge), King's Chimney (I traversed across Collie's ledge instead), the Inaccessible Pinnacle (I had hoped to do this, but there were two parties queueing for it when I arrived, and I couldn't be bothered waiting), and Naismith's route on Basteir Tooth (instead, I walked underneath Am Bastier, and scrambled up and down its East ridge).</sup>
 
-> <sup>6</sup> _Bealach_ - Gaelic for a narrow mountain pass (akin to the more commonly used French term _col_).
+> <sup>6 _Bealach_ - Gaelic for a narrow mountain pass (akin to the more commonly used French term _col_).
 
-> <sup>7</sup> _Choire_ (also _coire_, _corrie_) - Gaelic for a cirque or glaciated bowl.
+> <sup>7</sup> _Choire_ (also _coire_, _corrie_) - Gaelic for a cirque or glaciated bowl.</sup>
