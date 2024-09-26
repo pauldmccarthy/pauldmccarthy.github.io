@@ -9,7 +9,7 @@ I just got back from a much needed break on the stunning Isle of Skye, in the Sc
 
 After a couple of days of terrible forecasts and mixed weather, we were treated to a full week of blue skies and light winds. Jacki and I wasted no time, by getting out and completing the Clach Glas ridge traverse, a scrambling loop over Sgurr nan Each and Bla-bheinn, in the Eastern Cuillin.
 
-<div class="s3-strip" images=""> </div> <sup></sup>
+<div class="s3-strip" images="clach_1.jpg;clach_2.jpg;clach_3.jpg;clach_4.jpg;clach_5.jpg"> </div>
 
 A couple of days later we all caught the Misty Isle boat over to Loch Coruisk. While the others went hiking, Will and I raced up the Dubh Slabs, the longest continuous rock climb in the UK<sup>1</sup>.  We followed this up with a dip in Loch Coruisk - I managed about 45 seconds in the frigid water before retreating to lie in the sun.
 
