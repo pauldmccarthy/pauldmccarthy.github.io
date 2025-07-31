@@ -1,0 +1,20 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+:root {
+    --bg: #ffffff;
+    --href: #
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+        --bg: #212132;
+    }
+}
+
+a {
+    text-decoration: none;
+}
