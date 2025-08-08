@@ -13,14 +13,12 @@
     --link-hover:    #ff9000;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        color-scheme:     dark;
-        --caption:       grey;
-        --caption-hover: silver;
-        --link:          #ff9000;
-        --link-hover:    #a05000;
-    }
+[data-theme="dark"] {
+    color-scheme:     dark;
+    --caption:       grey;
+    --caption-hover: silver;
+    --link:          #ff9000;
+    --link-hover:    #a05000;
 }
 
 html {
