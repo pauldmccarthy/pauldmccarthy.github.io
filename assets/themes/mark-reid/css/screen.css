@@ -188,7 +188,7 @@ ul.compact li a {
 	/*font-variant: small-caps;*/
 	line-height: 1em;
 	margin-top: .5em;
-	margin-bottom: 0;
+	margin-bottom: .5em;
 }
 #header h1 {
 	margin-bottom: 0;

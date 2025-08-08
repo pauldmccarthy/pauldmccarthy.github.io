@@ -13,8 +13,8 @@ s3-region: eu-west-1
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : small adventures
-tagline: small adventures
+title : paul mccarthy
+tagline: paul mccarthy
 author :
   name :   Paul McCarthy
   email :  pauldmccarthy@gmail.com
