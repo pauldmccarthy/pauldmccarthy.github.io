@@ -19,3 +19,15 @@ Instructions for adding a new post:
      -n <my-new-post>
    ```
    `<my-new-post>` must match the `s3-album` ID you have in the `.md` file.
+
+
+To run locally from a fresh clone (assuming ruby and bundler are installed):
+
+```
+bundle init
+bundle config set --local path 'vendor/bundle'
+bundle add jekyll
+bundle install
+bundle exec jekyll build -d _site
+bundle exec jekyll serve -w
+```
