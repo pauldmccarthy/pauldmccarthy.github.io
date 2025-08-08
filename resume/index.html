@@ -1,337 +1,294 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+---
+title:  resume
+layout: page
+---
 
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-    <title>Paul McCarthy - Software engineer</title>
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
-    <link rel="stylesheet" href="style.css">
-  </head>
-
-  <body class="sans-serif normal f4">
-
-    <nav class="fl w-20 fixed f5">
-
-      <div class="pl2">
-        <h1 class="normal">Paul McCarthy</h1>
-        <h2 class="normal">Software engineer</h2>
-      </div>
-
-      <ul class="list i silver pl4">
-        <li>DOB 26th July 1982
-        <li>Australian citizen
-        <li>UK permanent resident
-      </ul>
+{% include JB/setup %}
 
 
-      <ul class="list pl4">
-        <li><a href="https://github.com/pauldmccarthy/">GitHub</a>
-        <li><a href="https://git.fmrib.ox.ac.uk/paulmc/">FMRIB Gitlab</a>
-        <li><a href="mailto:pauldmccarthy@gmail.com">Personal email</a>
-        <li><a href="mailto:paul.mccarthy@ndcn.ox.ac.uk">Oxford email</a>
-        <li><p>
-        <li><p><a href="#2014-present">2014-present</a><br><span class="i small-caps silver">FMRIB, Oxford, UK</span>
-        <li><p><a href="#2010-2013">   2010-2013   </a><br><span class="i small-caps silver">Univ. Otago, Dunedin, NZ</span>
-        <li><p><a href="#2007-2010">   2007-2010   </a><br><span class="i small-caps silver">CSIRO, Hobart, AUS</span>
-        <li><p><a href="#2006-2007">   2006-2007   </a><br><span class="i small-caps silver">ADFA, Canberra, AUS</span>
-        <li><p><a href="#2002-2006">   2002-2006   </a><br><span class="i small-caps silver">UniSA, Adelaide, AUS</span>
-        <li><a href="#outside">Outside of work</a>
-      </ul>
-    </nav>
+I am a research software engineer with a wide range of experience in
+different domains and programming languages. I am presently employed at
+the <a href="https://www.oxcin.ox.ac.uk">Oxford Centre for Integrative
+Neuroimaging (OxCIN/FMRIB)</a>, where I work on a range of projects
+related to the analysis and visualisation of functional and structural MRI
+data. I have previously held roles in modelling and simulation,
+microcontroller programming, web development, and data analysis.
 
-    <div class="fr w-80 pr4 pt5" >
-      <p>I am a research software engineer with a wide range of experience in
-        different domains and programming languages. I am presently employed at
-        the <a href="https://www.oxcin.ox.ac.uk">Oxford Centre for Integrative
-          Neuroimaging (OxCIN/FMRIB)</a>, where I work on a range of projects
-        related to the analysis and visualisation of functional and structural MRI
-        data. I have previously held roles in modelling and simulation,
-        microcontroller programming, web development, and data analysis.</p>
+<hr>
 
-      <hr>
+<h2 id="2014-present" class="normal small-caps">2014-present - Research software engineer</h2>
+<h3 class="normal small-caps i silver">Oxford Centre for Integrative Neuroimaging (OxCIN/FMRIB), UK</h3>
 
+My current position involves software development, management, and
+maintenance on a range of projects related
+to <a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/">FSL</a>, the FMRIB
+Software Library.
 
-      <div class="flex items-center">
-        <div class="w-80 pa1">
-          <h2 id="2014-present" class="normal small-caps">2014-present - Research software engineer</h2>
-          <h3 class="normal small-caps i silver">Oxford Centre for Integrative Neuroimaging (OxCIN/FMRIB), UK</h3>
-        </div>
-        <a class="w-20 pa1" href="https://www.oxcin.ox.ac.uk"><img src="oxcin.png"/></a>
-      </div>
+<p>Some of my software contributions to FMRIB and FSL have been:</p>
 
-      <p>My current position involves software development, management, and
-        maintenance on a range of projects related
-        to <a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/">FSL</a>, the FMRIB
-        Software Library.</p>
+<div class="flex items-center">
+  <img class="w-10 pa1" src="fsleyes.png"/>
+  <ul class="list w-90 pa1">
+    <li><a href="https://open.oxcin.ox.ac.uk/pages/fsl/fsleyes/fsleyes/userdoc/">
+        <strong>FSLeyes</strong></a> - an interactive OpenGL-based desktop
+      application for visualisation of 3D and 4D MRI data, written in
+      Python.</li>
+    <li class="f7 silver i small-caps">Python, OpenGL, GLSL, wxPython,
+      numpy, matplotlib</li>
+  </ul>
+</div>
 
-      <p>Some of my software contributions to FMRIB and FSL have been:</p>
+<div class="flex items-center">
+  <img class="w-10 pa1" src="gitlab-ci.png"/>
+  <ul class="list w-90 pa1">
+    <li><a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/#/development/management/index">
+        The <strong>FSL build system</strong></a>, an automated modular
+      build system for FSL, based on
+      the <a href="https://docs.conda.io/">conda</a> environment and
+      package manager, and making extensive use of GitLab CI and Amazon
+      AWS. As part of this work I also added support for building FSL on
+      Apple Silicon, and made substantial improvements to the build
+      processes for our C++/CUDA applications to achieve compatibilty
+      across a wide range of GPU hardware.</li>
+    <li class="f7 silver i small-caps">Python, CI / CD, AWS, Conda, GNU Make</li>
+  </ul>
+</div>
 
-      <div class="flex items-center">
-        <img class="w-10 pa1" src="fsleyes.png"/>
-        <ul class="list w-90 pa1">
-          <li><a href="https://open.oxcin.ox.ac.uk/pages/fsl/fsleyes/fsleyes/userdoc/">
-              <strong>FSLeyes</strong></a> - an interactive OpenGL-based desktop
-            application for visualisation of 3D and 4D MRI data, written in
-            Python.</li>
-          <li class="f7 silver i small-caps">Python, OpenGL, GLSL, wxPython,
-          numpy, matplotlib</li>
-        </ul>
-      </div>
+<div class="flex items-center">
+  <a class="w-10 pa1" href="mmorf.png"><img src="mmorf.png"/></a>
+  <ul class="list w-90 pa1">
+    <li><a href="https://git.fmrib.ox.ac.uk/fsl/MMORF"><strong>MMORF</strong></a>
+      - a CUDA-accelerated C++ application for non-linear registration
+      of MRI images, designed and developed by my
+      colleague <a href="https://www.ndcn.ox.ac.uk/team/frederik-lange">Frederik
+        Lange</a>. I ported the codebase to pure C++, using
+      the <code>std::thread</code> library for parallelism, in order to
+      allow MMORF to be used on a wider range of platforms, and to take
+      advantage of lower cost cloud-based compute instances when running
+      at scale.</li>
+    <li class="f7 silver i small-caps">C++, CUDA, numerical methods</li>
+  </ul>
+</div>
 
-      <div class="flex items-center">
-        <img class="w-10 pa1" src="gitlab-ci.png"/>
-        <ul class="list w-90 pa1">
-          <li><a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/#/development/management/index">
-              The <strong>FSL build system</strong></a>, an automated modular
-            build system for FSL, based on
-            the <a href="https://docs.conda.io/">conda</a> environment and
-            package manager, and making extensive use of GitLab CI and Amazon
-            AWS. As part of this work I also added support for building FSL on
-            Apple Silicon, and made substantial improvements to the build
-            processes for our C++/CUDA applications to achieve compatibilty
-            across a wide range of GPU hardware.</li>
-          <li class="f7 silver i small-caps">Python, CI / CD, AWS, Conda, GNU Make</li>
-        </ul>
-      </div>
+<div class="flex items-center">
+  <a href="indexed-gzip.png" class="w-10 pa1"><img src="indexed-gzip.png"/></a>
+  <ul class="list w-90 pa1">
+    <li><a href="https://github.com/pauldmccarthy/indexed_gzip"><code>indexed-gzip</code></a>,
+      a Python library for fast random access of gzip files, written in
+      C and Cython.</li>
+    <li class="f7 silver i small-caps">C, Cython, Python</li>
+  </ul>
+</div>
 
-      <div class="flex items-center">
-        <a class="w-10 pa1" href="mmorf.png"><img src="mmorf.png"/></a>
-        <ul class="list w-90 pa1">
-          <li><a href="https://git.fmrib.ox.ac.uk/fsl/MMORF"><strong>MMORF</strong></a>
-            - a CUDA-accelerated C++ application for non-linear registration
-            of MRI images, designed and developed by my
-            colleague <a href="https://www.ndcn.ox.ac.uk/team/frederik-lange">Frederik
-              Lange</a>. I ported the codebase to pure C++, using
-            the <code>std::thread</code> library for parallelism, in order to
-            allow MMORF to be used on a wider range of platforms, and to take
-            advantage of lower cost cloud-based compute instances when running
-            at scale.</li>
-          <li class="f7 silver i small-caps">C++, CUDA, numerical methods</li>
-        </ul>
-      </div>
+<div class="flex items-center">
+  <a href="armawrap.png" class="w-10 pa1"><img src="armawrap.png"/></a>
+  <ul class="list w-90 pa1">
+    <li><a href="https://git.fmrib.ox.ac.uk/fsl/armawrap"><code>armawrap</code></a>,
+      A C++ header-only library for supporting legacy code that was written
+      against the <a href="http://www.robertnz.net/nm_intro.htm">Newmat</a>
+      linear algebra library but which, under the hood, uses the more
+      modern <a href="http://arma.sourceforge.net">Armadillo</a> linear
+      algebra library.</li>
+    <li class="f7 silver i small-caps">C++, template metaprogramming, linear algebra</li>
+</div>
 
-      <div class="flex items-center">
-        <a href="indexed-gzip.png" class="w-10 pa1"><img src="indexed-gzip.png"/></a>
-        <ul class="list w-90 pa1">
-          <li><a href="https://github.com/pauldmccarthy/indexed_gzip"><code>indexed-gzip</code></a>,
-            a Python library for fast random access of gzip files, written in
-            C and Cython.</li>
-          <li class="f7 silver i small-caps">C, Cython, Python</li>
-        </ul>
-      </div>
+<div class="flex items-center">
+  <a href="funpack.png" class="w-10 pa1"><img src="funpack.png"/></a>
+  <ul class="list w-90 pa1">
+    <li><a href="https://pages.fmrib.ox.ac.uk/fsl/funpack/"><strong>FUNPACK</strong></a>,
+      a Python-based command-line application for working with very
+      large CSV files from the <a href="https://www.ukbiobank.ac.uk/">UK
+        Biobank</a>.</li>
+    <li class="f7 silver i small-caps">Python, Pandas, Dask, HDF5</li>
+  </ul>
+</div>
 
-      <div class="flex items-center">
-        <a href="armawrap.png" class="w-10 pa1"><img src="armawrap.png"/></a>
-        <ul class="list w-90 pa1">
-          <li><a href="https://git.fmrib.ox.ac.uk/fsl/armawrap"><code>armawrap</code></a>,
-            A C++ header-only library for supporting legacy code that was written
-            against the <a href="http://www.robertnz.net/nm_intro.htm">Newmat</a>
-            linear algebra library but which, under the hood, uses the more
-            modern <a href="http://arma.sourceforge.net">Armadillo</a> linear
-            algebra library.</li>
-          <li class="f7 silver i small-caps">C++, template metaprogramming, linear algebra</li>
-      </div>
+<div class="flex items-center">
+  <a href="pyfeeds.png" class="w-10 pa1"><img src="pyfeeds.png"/></a>
+  <ul class="list w-90 pa1">
+    <li><a href="https://git.fmrib.ox.ac.uk/fsl/pyfeeds"><code>pyfeeds</code></a>,
+      a bespoke testing framework used to run our internal suite of
+      integration tests, which supports custom evaluation rules, and can
+      execute tests in parallel on a HPC cluster.</li>
+    <li class="f7 silver i small-caps">Python</li>
+  </ul>
+</div>
 
-      <div class="flex items-center">
-        <a href="funpack.png" class="w-10 pa1"><img src="funpack.png"/></a>
-        <ul class="list w-90 pa1">
-          <li><a href="https://pages.fmrib.ox.ac.uk/fsl/funpack/"><strong>FUNPACK</strong></a>,
-            a Python-based command-line application for working with very
-            large CSV files from the <a href="https://www.ukbiobank.ac.uk/">UK
-            Biobank</a>.</li>
-          <li class="f7 silver i small-caps">Python, Pandas, Dask, HDF5</li>
-        </ul>
-      </div>
+<div class="flex items-center">
+  <a href="https://github.com/pauldmccarthy/" class="w-10 pa1"><img src="github.png"/></a>
+  <p class="list w-90 pa1">During development of my own projects, I have
+    made many small contributions to a number of open source projects,
+    such
+    as <a href="https://github.com/nipy/nibabel/pulls?q=is%3Apr+author%3Apauldmccarthy"><code>nibabel</code></a>,
+    <a href="https://github.com/wxWidgets/Phoenix/pulls?q=is%3Apr+author%3Apauldmccarthy"><code>wxPython</code></a>,
+    <a href="https://github.com/ipython/ipython/pulls?q=is%3Apr+author%3Apauldmccarthy"><code>IPython</code></a>,
+    <a href="https://github.com/pandas-dev/pandas/pull/40180"><code>pandas</code></a>,
+    and
+    <a href="https://github.com/mikedh/trimesh/pulls?q=is%3Apr+pauldmccarthy"><code>trimesh</code></a>.</p>
+</div>
 
-      <div class="flex items-center">
-        <a href="pyfeeds.png" class="w-10 pa1"><img src="pyfeeds.png"/></a>
-        <ul class="list w-90 pa1">
-          <li><a href="https://git.fmrib.ox.ac.uk/fsl/pyfeeds"><code>pyfeeds</code></a>,
-            a bespoke testing framework used to run our internal suite of
-            integration tests, which supports custom evaluation rules, and can
-            execute tests in parallel on a HPC cluster.</li>
-          <li class="f7 silver i small-caps">Python</li>
-        </ul>
-      </div>
+<div class="flex items-center">
+  <a href="https://conda-forge.org/" class="w-10 pa1"><img src="conda-forge.png"/></a>
+  <p class="list w-90 pa1">I have played an active role in
+    the <a href="https://conda-forge.org/">conda-forge</a> package
+    ecosystem, having used conda-forge to publish my own software, and being
+    added to the maintainence team for a number of other packages, such
+    as <a href="https://github.com/conda-forge/wxwidgets-feedstock"><code>wxwidgets</code></a>,
+    <a href="https://github.com/conda-forge/wxpython-feedstock"><code>wxPython</code></a>,
+    and <a href="https://github.com/conda-forge/libxmlpp-feedstock"><code>libxml++</code></a>.</p>
+</div>
 
-      <div class="flex items-center">
-        <a href="https://github.com/pauldmccarthy/" class="w-10 pa1"><img src="github.png"/></a>
-        <p class="list w-90 pa1">During development of my own projects, I have
-          made many small contributions to a number of open source projects,
-          such
-          as <a href="https://github.com/nipy/nibabel/pulls?q=is%3Apr+author%3Apauldmccarthy"><code>nibabel</code></a>,
-          <a href="https://github.com/wxWidgets/Phoenix/pulls?q=is%3Apr+author%3Apauldmccarthy"><code>wxPython</code></a>,
-          <a href="https://github.com/ipython/ipython/pulls?q=is%3Apr+author%3Apauldmccarthy"><code>IPython</code></a>,
-          <a href="https://github.com/pandas-dev/pandas/pull/40180"><code>pandas</code></a>,
-          and
-          <a href="https://github.com/mikedh/trimesh/pulls?q=is%3Apr+pauldmccarthy"><code>trimesh</code></a>.</p>
-      </div>
+<p>I have also played an active role in my workplace in teaching and public
+  engagement:</p>
 
-      <div class="flex items-center">
-        <a href="https://conda-forge.org/" class="w-10 pa1"><img src="conda-forge.png"/></a>
-        <p class="list w-90 pa1">I have played an active role in
-          the <a href="https://conda-forge.org/">conda-forge</a> package
-          ecosystem, having used conda-forge to publish my own software, and being
-          added to the maintainence team for a number of other packages, such
-          as <a href="https://github.com/conda-forge/wxwidgets-feedstock"><code>wxwidgets</code></a>,
-          <a href="https://github.com/conda-forge/wxpython-feedstock"><code>wxPython</code></a>,
-          and <a href="https://github.com/conda-forge/libxmlpp-feedstock"><code>libxml++</code></a>.</p>
-      </div>
+<ul class="list">
+  <li><p>In 2023 I organised and led an effort to migrate the FSL
+      documentation from an old Wiki framework
+      (<a href="https://github.com/moinwiki">MoinMoin</a>) to a markdown-based
+      framework (<a href="https://docsify.js.org/">Docsify</a>). I organised
+      a <a href="https://git.fmrib.ox.ac.uk/paulmc/fsl-docathlon-2023/">“docathlon”</a>
+      to solicit help from colleagues in porting the old documentation over to
+      the <a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/">new site</a>, which
+      also doubled as a <code>git</code> training workshop for the
+      participants.</p></li>
 
-      <p>I have also played an active role in my workplace in teaching and public
-        engagement:</p>
+  <li><p>I have volunteered for a range of public engagement activities;
+      for example, for the past two years I have ran
+      an <a href="https://pages.fmrib.ox.ac.uk/paulmc/oxford_neuroscience_experience/">“MRI
+        analysis bootcamp”</a> for high-school students interested in pursuing
+      scientific studies at University.</p></li>
 
-      <ul class="list">
-        <li><p>In 2023 I organised and led an effort to migrate the FSL
-            documentation from an old Wiki framework
-            (<a href="https://github.com/moinwiki">MoinMoin</a>) to a markdown-based
-            framework (<a href="https://docsify.js.org/">Docsify</a>). I organised
-            a <a href="https://git.fmrib.ox.ac.uk/paulmc/fsl-docathlon-2023/">“docathlon”</a>
-            to solicit help from colleagues in porting the old documentation over to
-            the <a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/">new site</a>, which
-            also doubled as a <code>git</code> training workshop for the
-            participants.</p></li>
+  <li><p>I have taught on, and developed large portions of the materials
+      for our
+      internal <a href="https://git.fmrib.ox.ac.uk/fsl/win-pytreat">“PyTreat”</a>,
+      a series of internal Python-based hackathon events, intended to help
+      researchers in getting started with the Python programming
+      language.</p></li>
 
-        <li><p>I have volunteered for a range of public engagement activities;
-            for example, for the past two years I have ran
-            an <a href="https://pages.fmrib.ox.ac.uk/paulmc/oxford_neuroscience_experience/">“MRI
-              analysis bootcamp”</a> for high-school students interested in pursuing
-            scientific studies at University.</p></li>
+  <li><p>I have held lecturing and tutoring roles on our
+      internal <a href="https://www.ndcn.ox.ac.uk/study-with-us/graduate-students/fmrib-graduate-programme">MRI
+        Graduate Programme</a> course, held annually for the benefit of
+      Oxford-based researchers and PhD students.</p></li>
 
-        <li><p>I have taught on, and developed large portions of the materials
-            for our
-            internal <a href="https://git.fmrib.ox.ac.uk/fsl/win-pytreat">“PyTreat”</a>,
-            a series of internal Python-based hackathon events, intended to help
-            researchers in getting started with the Python programming
-            language.</p></li>
+  <li><p>I have lectured and tutored on
+      the <a href="https://fsl.fmrib.ox.ac.uk/fslcourse/">FSL course</a>, an
+      international course held annually, which teaches MRI analysis using
+      FSL.</p></li>
 
-        <li><p>I have held lecturing and tutoring roles on our
-            internal <a href="https://www.ndcn.ox.ac.uk/study-with-us/graduate-students/fmrib-graduate-programme">MRI
-              Graduate Programme</a> course, held annually for the benefit of
-            Oxford-based researchers and PhD students.</p></li>
+</ul>
 
-        <li><p>I have lectured and tutored on
-            the <a href="https://fsl.fmrib.ox.ac.uk/fslcourse/">FSL course</a>, an
-            international course held annually, which teaches MRI analysis using
-            FSL.</p></li>
+<hr>
 
-      </ul>
+<h2 id="2010-2013" class="normal small-caps">2010-2013 - PhD</h2>
+<h3 class="normal small-caps i silver">Department of Computer Science, University of Otago, Dunedin, New Zealand</h3>
+<span class="f7 silver i small-caps">C, Haskell, Python, MRI analysis,
+  graph theory, LaTeX</span>
 
-      <hr>
+<p>My <a href="https://ourarchive.otago.ac.nz/handle/10523/4864">PhD</a>
+  revolved around the application of graph theory techinques to fMRI data,
+  to explore how functional connectivity changes with age and the presence
+  of Alzheimer’s disease. Most of the code which formed the basis for my
+  analyses was written as part of a package I developed
+  called <a href="https://github.com/pauldmccarthy/ccnet"><code>ccnet</code></a>,
+  written in C.</p>
 
-      <h2 id="2010-2013" class="normal small-caps">2010-2013 - PhD</h2>
-      <h3 class="normal small-caps i silver">Department of Computer Science, University of Otago, Dunedin, New Zealand</h3>
-      <span class="f7 silver i small-caps">C, Haskell, Python, MRI analysis,
-      graph theory, LaTeX</span>
+<p>Before migrating my code to C, I used the first 12 months of my PhD as
+  an opportunity to teach myself Haskell, but then decided to port all of my
+  code to C for more fine-grained control over performance and memory
+  usage.</p>
 
-      <p>My <a href="https://ourarchive.otago.ac.nz/handle/10523/4864">PhD</a>
-        revolved around the application of graph theory techinques to fMRI data,
-        to explore how functional connectivity changes with age and the presence
-        of Alzheimer’s disease. Most of the code which formed the basis for my
-        analyses was written as part of a package I developed
-        called <a href="https://github.com/pauldmccarthy/ccnet"><code>ccnet</code></a>,
-        written in C.</p>
+<hr>
 
-      <p>Before migrating my code to C, I used the first 12 months of my PhD as
-        an opportunity to teach myself Haskell, but then decided to port all of my
-        code to C for more fine-grained control over performance and memory
-        usage.</p>
+<h2 id="2007-2010" class="normal small-caps">2007-2010 - Software engineer</h2>
+<h3 class="normal small-caps i silver">CSIRO, Hobart, Australia</h3>
+<span class="f7 silver i small-caps">Java, MATLAB, C, Python,
+  hardware</span>
 
-      <hr>
+<p>I worked as the primary software engineer in the deployment of three
+  wireless sensor networks in Tasmania, including:</p>
 
-      <h2 id="2007-2010" class="normal small-caps">2007-2010 - Software engineer</h2>
-      <h3 class="normal small-caps i silver">CSIRO, Hobart, Australia</h3>
-      <span class="f7 silver i small-caps">Java, MATLAB, C, Python,
-      hardware</span>
+<ul class="list">
+  <li>a relatively large scale network (70 nodes) deployed
+    for <a href="https://dl.acm.org/doi/10.1145/1435473.1435487">real time
+      monitoring of soil moisture</a> in a farm environment;</li>
 
-      <p>I worked as the primary software engineer in the deployment of three
-        wireless sensor networks in Tasmania, including:</p>
+  <li>a <a href="https://doi.org/10.1109/OCEANSE.2009.5278177">multi-hop
+      underwater sensor network</a>, using acoustic modems for inter-node
+    communication, and a 3G modem for internet uplink;</li>
 
-      <ul class="list">
-        <li>a relatively large scale network (70 nodes) deployed
-          for <a href="https://dl.acm.org/doi/10.1145/1435473.1435487">real time
-            monitoring of soil moisture</a> in a farm environment;</li>
+  <li>and a prototype low cost marine wireless sensor node, for deployment
+    in salmon hatcheries.</li>
+</ul>
 
-        <li>a <a href="https://doi.org/10.1109/OCEANSE.2009.5278177">multi-hop
-            underwater sensor network</a>, using acoustic modems for inter-node
-          communication, and a 3G modem for internet uplink;</li>
+<p>I played leading roles in each of these projects, working on
+  hardware/electronic design and construction, low level system programming
+  and routing protocols in C, and data transmission, storage, and real time
+  data presentation via a dedicated website, using Java.</p>
 
-        <li>and a prototype low cost marine wireless sensor node, for deployment
-          in salmon hatcheries.</li>
-      </ul>
+<p>As part of another project, I worked on the development of a platform
+  agnostic operating system written primarily in C, for low powered wireless
+  devices with 8-bit microcontrollers. I worked on the design and
+  development of system and device drivers, including work on a bootloader
+  with wireless capabilities, for remote reprogramming.</p>
 
-      <p>I played leading roles in each of these projects, working on
-        hardware/electronic design and construction, low level system programming
-        and routing protocols in C, and data transmission, storage, and real time
-        data presentation via a dedicated website, using Java.</p>
+<p>Before leaving CSIRO to begin my PhD, I worked as the lead developer
+  on a MATLAB toolbox for the processing of marine moorings data, with
+  the aim of providing a standard output format for data to be hosted by
+  the Integrated Marine Observing System (IMOS). I am quite proud of the
+  fact that the project is still actively used and developed - it can be
+  found at
+  <a href="https://github.com/aodn/imos-toolbox/">https://github.com/aodn/imos-toolbox/</a>.</p>
 
-      <p>As part of another project, I worked on the development of a platform
-        agnostic operating system written primarily in C, for low powered wireless
-        devices with 8-bit microcontrollers. I worked on the design and
-        development of system and device drivers, including work on a bootloader
-        with wireless capabilities, for remote reprogramming.</p>
+<hr>
 
-      <p>Before leaving CSIRO to begin my PhD, I worked as the lead developer
-        on a MATLAB toolbox for the processing of marine moorings data, with
-        the aim of providing a standard output format for data to be hosted by
-        the Integrated Marine Observing System (IMOS). I am quite proud of the
-        fact that the project is still actively used and developed - it can be
-        found at
-        <a href="https://github.com/aodn/imos-toolbox/">https://github.com/aodn/imos-toolbox/</a>.</p>
+<h2 id="2006-2007" class="normal small-caps">2006-2007 - Software engineer</h2>
+<h3 class="normal small-caps i silver">Australian Defence Force Academy, Canberra, Australia</h3>
 
-      <hr>
+<span class="f7 silver i small-caps">Java, C#, Modelling/simulation</span>
 
-      <h2 id="2006-2007" class="normal small-caps">2006-2007 - Software engineer</h2>
-      <h3 class="normal small-caps i silver">Australian Defence Force Academy, Canberra, Australia</h3>
+<p>A mixture of software development, maintenance, and
+  experimentation. My first project involved the development of a
+  multi-agent system for crowd behaviour simulation during panic
+  situations. This entailed the implementation (in Java) of the Helbing
+  particle physics model, which is a prevalent crowd simulation model. In
+  another project, I developed a dynamic social network simulation
+  program, also in Java, which provided visualisation of social network
+  simulations, and exporting in graph or tabular form of simulation
+  data.</p>
 
-      <span class="f7 silver i small-caps">Java, C#, Modelling/simulation</span>
-
-      <p>A mixture of software development, maintenance, and
-      experimentation. My first project involved the development of a
-      multi-agent system for crowd behaviour simulation during panic
-      situations. This entailed the implementation (in Java) of the Helbing
-      particle physics model, which is a prevalent crowd simulation model. In
-      another project, I developed a dynamic social network simulation
-      program, also in Java, which provided visualisation of social network
-      simulations, and exporting in graph or tabular form of simulation
-        data.</p>
-
-      <hr>
+<hr>
 
 
-      <h2 id="2002-2006" class="normal small-caps">2002-2006 - Master of Science</h2>
-      <h3 class="normal small-caps i silver">Department of Computer Science, University
-      of South Australia, Adelaide, Australia</h3>
+<h2 id="2002-2006" class="normal small-caps">2002-2006 - Master of Science</h2>
+<h3 class="normal small-caps i silver">Department of Computer Science, University
+  of South Australia, Adelaide, Australia</h3>
 
-      <p>I completed a Bachelor of Computer Science with First Class Honours
-        (GPA 6.5), and used credit from my Honours degree to progress to a
-        Masters degree. My Masters thesis involved an exploration into
-        different methods of acquiring data from mobile phones, and the issues
-        involved in presenting this data as forensic evidence.</p>
+<p>I completed a Bachelor of Computer Science with First Class Honours (GPA
+  6.5), and used credit from my Honours degree to progress to a Masters
+  degree. My <a href="forensic_analysis_of_mobile_phones.pdf">Masters
+  thesis</a> involved an exploration into different methods of acquiring data
+  from mobile phones, and the issues involved in presenting this data as
+  forensic evidence.</p>
 
-      <hr>
+<hr>
 
-      <h2 id="outside" class="normal small-caps">Outside of work</h2>
-      <h3 class="normal small-caps i silver">Llanberis, North Wales, UK</h3>
+<h2 id="outside" class="normal small-caps">Outside of work</h2>
+<h3 class="normal small-caps i silver">Llanberis, North Wales, UK</h3>
 
-      <div class="flex items-center">
-        <div class="w-80 pa1">
-          <p>Most of my free time is spent in the outdoors or at the climbing
-            wall. I have spent much of my adult life suffering from an addiction to
-            rock climbing and, since moving to North Wales in 2018, have also
-            developed an affinity for fell running and scrambling. I also enjoy
-            mountain biking, surfing, and snowboarding when conditions and time
-            allow. I occasionally post photos and trip reports at
-            <a href="https://pauldmccarthy.github.io/">https://pauldmccarthy.github.io/</a>.
-          <p>I am a keen but mediocre guitarist, and also enjoy board games, chess,
-            reading novels, and <em>very</em> occasionally hacking on hobby coding
-            projects that usually lead nowhere.</p>
-        </div>
-        <a class="w-20 pa1" href="indian-creek.jpg"><img src="indian-creek.jpg"/></a>
-      </div>
+<div class="flex items-center">
+  <div class="w-80 pa1">
+    <p>Most of my free time is spent in the outdoors or at the climbing
+      wall. I have spent much of my adult life suffering from an addiction to
+      rock climbing and, since moving to North Wales in 2018, have also
+      developed an affinity for fell running and scrambling. I also enjoy
+      mountain biking, surfing, and snowboarding when conditions and time
+      allow. I occasionally post photos and trip reports at
+      <a href="https://pauldmccarthy.github.io/">https://pauldmccarthy.github.io/</a>.
+    <p>I am a keen but mediocre guitarist, and also enjoy board games, chess,
+      reading novels, and <em>very</em> occasionally hacking on hobby coding
+      projects that usually lead nowhere.</p>
+  </div>
+  <a class="w-20 pa1" href="indian-creek.jpg"><img src="indian-creek.jpg"/></a>
+</div>
 
-    </div>
-  </body>
-
-</html>
+</div>

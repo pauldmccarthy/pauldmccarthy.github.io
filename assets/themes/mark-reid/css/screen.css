@@ -23,6 +23,11 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
 	font-family: sans-serif
 	background-position: center -18em;
@@ -83,7 +88,6 @@ sup:hover {
 }
 
 
-
 /* @group FancyFirst */
 .emphnext + p:first-letter, p.emphfirst:first-letter {
 	font-size: 48px;
@@ -136,30 +140,12 @@ table.neat {
 }
 
 caption {
-	/* color: #333; */
 	font-size: 0.875em;
 	margin: 0.875em auto 0 auto;
 	line-height: 1.14em;
 	text-align: justify;
 }
 
-/* @end */
-
-/* @group Lists */
-ul {
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
-	line-height: 1.5em;
-	padding-left: 1.5em;
-}
-ul li {
-	list-style-type: square;
-	list-style-position: outside;
-}
-ol li {
-	list-style-type: decimal;
-	list-style-position: inside;
-}
 dt { font-weight: bold;}
 dd { margin: 0 0 1.5em 0; text-align: justify; }
 

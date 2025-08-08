@@ -4,7 +4,7 @@ layout: page
 ---
 {% include JB/setup %}
 
-I'm an Australian living in the UK. I work as a software engineer, and enjoy a range of outdoor activities. I occasionally write accounts of what I've been up to in my spare time:
+I'm an Australian living in North Wales. I <a href="resume/">work</a> as a software engineer, and enjoy a range of outdoor activities. I occasionally write accounts of what I've been up to in my spare time:
 
 <ul class="posts">
   {% for post in site.posts limit:5 %}
