@@ -1,0 +1,50 @@
+\documentclass{resume}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,
+  breaklinks=true,
+  linkcolor={orange!60!black},
+  citecolor={orange!60!black},
+  urlcolor={orange!60!black}
+}
+
+
+\usepackage[font=small,labelfont=bf,margin=1.0in]{caption}
+\renewcommand{\familydefault}{\sfdefault}
+
+\author{ [[ front.title ]] }
+
+\address{
+[% for line in front.address %]
+[[ line ]]\\
+[% endfor %]
+}
+{
+[% for line in front.details %]
+[[ line ]]\\
+[% endfor %]
+[% for c in front.contact %]
+[[ url(c.href) ]]\\
+[% endfor %]
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{category}{Summary}
+\citemnobullet [[ abstract ]]
+\end{category}
+
+\begin{category}{Chronology}
+
+[% for sect in sections %]
+[[ sect ]]\\
+
+[% endfor %]
+
+\end{category}
+\end{document}

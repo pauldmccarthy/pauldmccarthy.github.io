@@ -31,3 +31,9 @@ bundle install
 bundle exec jekyll build -d _site
 bundle exec jekyll serve -w
 ```
+
+To re-generate the resume files (assuming uv and latex are installed):
+```
+uv run ./resume/render.py ./resume/resume.yaml ./resume html
+uv run ./resume/render.py ./resume/resume.yaml ./resume pdf
+```

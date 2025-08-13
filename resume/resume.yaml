@@ -1,0 +1,439 @@
+front:
+  title: Paul McCarthy
+  subtitle: Software engineer
+  details:
+   - DOB 26th July 1982
+   - Australian citizen
+   - UK permanent resident
+  address:
+   - 10 Newton Street
+   - Llanberis, LL55 4HN
+   - Wales, United Kingdom
+   - +44 7474795710
+  contact:
+   - name: GitHub
+     href: github
+   - name: FMRIB Gitlab
+     href: gitlab
+   - name: Personal email
+     href: gmail
+   - name: Oxford email
+     href: oxford_mail
+  toc:
+   - name:    2014-present
+     href:    2014-present
+     tagline: FMRIB, Oxford, UK
+   - name:    2010-2013
+     href:    2010-2013
+     tagline: Univ. Otago, Dunedin, NZ
+   - name:    2007-2010
+     href:    2007-2010
+     tagline: CSIRO, Hobart, AUS
+   - name:    2006-2007
+     href:    2006-2007
+     tagline: ADFA, Canberra, AUS
+   - name:    2002-2006
+     href:    2002-2006
+     tagline: UniSA, Adelaide, AUS
+   - name:    Outside of work
+     href:    outside
+
+
+
+abstract: |
+  I am a research software engineer with a wide range of experience in
+  different domains and programming languages. I am presently employed
+  at the {{ url('oxcin', 'Oxford Centre for Integrative Neuroimaging
+  (OxCIN/FMRIB)') }}, where I work on a range of projects related to
+  the analysis and visualisation of functional and structural MRI
+  data. I have previously held roles in modelling and simulation,
+  microcontroller programming, web development, and data analysis.
+
+sections:
+  - id:       2014-present
+    title:    2014-present - Research software engineer
+    subtitle: Oxford Centre for Integrative Neuroimaging (OxCIN/FMRIB), UK
+    content: |
+      My current position involves software development, management, and
+      maintenance on a range of projects related to {{ url('fsl', 'FSL') }},
+      the FMRIB Software Library.
+
+      Some of my software contributions to FMRIB and FSL have been:
+
+      {{ project('fsleyes')     }}
+      {{ project('fsl_ci')      }}
+      {{ project('mmorf')       }}
+      {{ project('igzip')       }}
+      {{ project('armawrap')    }}
+      {{ project('funpack')     }}
+      {{ project('pyfeeds')     }}
+      {{ project('github')      }}
+      {{ project('conda_forge') }}
+
+      I have also played an active role in my workplace in teaching,
+      public engagement, and generally helping out where I can:
+
+      {{ project('docathlon')    }}
+      {{ project('mri_bootcamp') }}
+      {{ project('neuroimage')   }}
+      {{ project('pytreat')      }}
+      {{ project('grad_course')  }}
+      {{ project('fsl_course')   }}
+
+      I have been fortunate enough to be listed as a co-author for my
+      technical contributions to a range of academic studies, including:
+
+      {{ pub('taylor_2025')   }}
+      {{ pub('lange_2024')    }}
+      {{ pub('lazari_2024')   }}
+      {{ pub('manuello_2024') }}
+      {{ pub('douaud_2022')   }}
+      {{ pub('almagro_2018')  }}
+
+
+  - id:       2010-2013
+    title:    2010-2013 - PhD
+    subtitle: Department of Computer Science, University of Otago,
+              Dunedin, New Zealand
+    tagline:  C, Haskell, Python, MRI analysis, graph theory, LaTeX
+    content: |
+      My {{ url('phd', 'PhD') }} revolved around the application of graph
+      theory techinques to fMRI data, to explore how functional
+      connectivity changes with age and the presence of Alzheimer’s
+      disease. Part of my PhD work was published in an academic journal:
+
+      {{ pub('mccarthy_2014') }}
+
+      Most of the code which formed the basis for my analyses was written as
+      part of a package I developed called {{ url('ccnet', c('ccnet')) }},
+      written in C.
+
+      Before migrating my code to C, I used the first 12 months of my PhD as
+      an opportunity to teach myself Haskell, but then decided to port all
+      of my code to C for more fine-grained control over performance and
+      memory usage
+
+
+  - id:       2007-2010
+    title:    2007-2010 - Software engineer
+    subtitle: CSIRO, Hobart, Australia
+    tagline:  Java, MATLAB, C, Python, hardware
+    content: |
+
+      I worked as the primary software engineer in the deployment of three
+      wireless sensor networks in Tasmania, including:
+
+      {{ project('wsn_farm')   }}
+      {{ project('wsn_marine') }}
+      {{ project('wsn_salmon') }}
+
+      I played leading roles in each of these projects, working on hardware/
+      electronic design and construction, low level system programming and
+      routing protocols in C, and data transmission, storage, and real time
+      data presentation via a dedicated website, using Java.
+
+      As part of another project, I worked on the development of a
+      platform-agnostic operating system written primarily in C, for low
+      powered wireless devices with 8-bit microcontrollers. I worked on the
+      design and development of system and device drivers, including work on
+      a bootloader with wireless capabilities, for remote reprogramming.
+
+      Before leaving CSIRO to begin my PhD, I worked as the lead developer
+      on a MATLAB toolbox for the processing of marine moorings data, with
+      the aim of providing a standard output format for data to be hosted by
+      the Integrated Marine Observing System (IMOS). I am quite proud of the
+      fact that the project is still actively used and developed - it can be
+      found at {{ url('https://github.com/aodn/imos-toolbox/') }}
+
+
+  - id:       2006-2007
+    title:    2006-2007 - Software engineer
+    subtitle: Australian Defence Force Academy, Canberra, Australia
+    tagline:  Java, C#, Modelling/simulation
+    content: |
+      A mixture of software development, maintenance, and experimentation.
+      My first project involved the development of a multi-agent system for
+      crowd behaviour simulation during panic situations. This entailed the
+      implementation (in Java) of the Helbing particle physics model, which
+      is a prevalent crowd simulation model. In another project, I developed
+      a dynamic social network simulation program, also in Java, which
+      provided visualisation of social network simulations, and exporting in
+      graph or tabular form of simulation data.
+
+  - id:       2002-2006
+    title:    2002-2006 - Master of Science
+    subtitle: Department of Computer Science, University of South Australia,
+              Adelaide, Australia
+    content: |
+      I completed a Bachelor of Computer Science with First Class Honours
+      (GPA 6.5), and used credit from my Honours degree to progress to a
+      Masters degree. My {{ url('masters', 'Masters thesis') }} involved an
+      exploration into different methods of acquiring data from mobile
+      phones, and the issues involved in presenting this data as forensic
+      evidence.
+
+  - id:       outside
+    title:    Outside of work
+    subtitle: Llanberis, North Wales, UK
+    icon:     indian-creek.jpg
+    icon_url: indian-creek.jpg
+    content: |
+      Most of my free time is spent in the outdoors or at the climbing
+      wall. I have spent much of my adult life suffering from an addiction
+      to rock climbing and, since moving to North Wales in 2018, have also
+      developed an affinity for fell running and scrambling. I also enjoy
+      mountain biking, surfing, and snowboarding when conditions and time
+      allow. I occasionally post photos and trip reports at {{
+      url('https://pauldmccarthy.github.io/') }}.
+
+      I am a keen but mediocre guitarist, and also enjoy board games, chess,
+      reading novels, and {{ i('very') }} occasionally hacking on hobby
+      coding projects that usually lead nowhere.
+
+
+projects:
+  fsleyes:
+    icon:     fsleyes.png
+    icon_url: https://git.fmrib.ox.ac.uk/fsl/fsleyes/fsleyes/
+    tagline:  Python, OpenGL, GLSL, wxPython, numpy, matplotlib
+    content: |
+
+      {{ url('fsleyes', b('FSLeyes')) }} - an interactive OpenGL-based
+      desktop application for visualisation of 3D and 4D MRI data, written
+      in Python.
+
+  fsl_ci:
+    icon:     gitlab-ci.png
+    icon_url: https://git.fmrib.ox.ac.uk/fsl/conda/fsl-ci-rules/
+    tagline:  Python, CI / CD, AWS, Conda, GNU Make
+    content: |
+      {{ url('fsl_ci', b('The FSL build system')) }} - an automated modular
+      build system for FSL, based on the {{ url('conda', 'conda') }}
+      environment and package manager, inspired by the {{ url('conda_forge',
+      'conda-forge') }} package ecosystem, and making extensive use of
+      GitLab CI and Amazon AWS. As part of this work I also added support
+      for building FSL on Apple Silicon, and made substantial improvements
+      to the build processes for our C++/CUDA applications to achieve
+      compatibilty across a wide range of GPU hardware
+
+  mmorf:
+    icon:     mmorf.png
+    icon_url: mmorf.png
+    tagline:  C++, CUDA, numerical methods
+    content: |
+      {{ url('mmorf', b('MMORF')) }} - a CUDA-accelerated C++ application
+      for non-linear registration of MRI images, designed and developed by
+      my colleague {{ url('rick', 'Frederik Lange') }}. I ported the
+      codebase to pure C++, using the {{ c('std::thread') }} library for
+      parallelism, in order to allow MMORF to be used on a wider range of
+      platforms, and to take advantage of lower cost cloud-based compute
+      instances when running at scale.
+
+  igzip:
+    icon:     indexed-gzip.png
+    icon_url: indexed-gzip.png
+    tagline:  C, Cython, Python
+    content: |
+      {{ url('igzip', c('indexed_gzip')) }} - a Python library for fast
+      random access of gzip files, written in C and Cython.
+
+  armawrap:
+    icon:     armawrap.png
+    icon_url: armawrap.png
+    tagline:  C++, template metaprogramming, linear algebra
+    content: |
+      {{ url('armawrap', c('armawrap')) }} - a C++ header-only library for
+      supporting legacy code that was written against the {{ url('newmat',
+      'Newmat') }} linear algebra library but which, under the hood, uses
+      the more modern {{ url('armadillo', 'Armadillo') }} linear algebra
+      library.
+
+  funpack:
+    icon:     funpack.png
+    icon_url: funpack.png
+    tagline:  Python, Pandas, Dask, HDF5
+    content: |
+      {{ url('funpack', b('FUNPACK')) }}, a Python-based command-line
+      application for working with very large CSV files from the {{
+      url('ukbiobank', 'UK Biobank') }}.
+
+  pyfeeds:
+    icon:     pyfeeds.png
+    icon_url: pyfeeds.png
+    tagline:  Python
+    content: |
+      {{ url('pyfeeds', c('pyfeeds')) }}, a bespoke testing framework used
+      to run our internal suite of integration tests, which supports custom
+      evaluation rules, and can execute tests in parallel on a HPC cluster.
+
+  github:
+    icon:     github.png
+    icon_url: https://github.com/pauldmccarthy/
+    content: |
+      During development of my own projects, I have made many small
+      contributions to a number of open source projects, such as {{
+      url('nibabel', c('nibabel') )}}, {{ url('wxpython', c('wxPython')) }},
+      {{ url('ipython', c('IPython')) }}, {{ url('pandas', c('pandas')) }},
+      and {{ url('trimesh', c('trimesh')) }}.
+
+  conda_forge:
+    icon:     conda-forge.png
+    icon_url: https://conda-forge.org/
+    content: |
+      I have played an active role in the {{ url('conda_forge',
+      'conda-forge') }} package ecosystem, having used conda-forge to
+      publish my own software, and being added to the maintainence team for
+      a number of other packages, such as {{ url('wxwidgets_cf',
+      c('wxwidgets')) }}, {{ url('wxpython_cf', c('wxPython')) }}, and {{
+      url('libxmlpp_cf', c('libxml++')) }}.
+
+  docathlon: |
+    In 2023 I organised and led an effort to migrate the FSL documentation
+    from an old Wiki framework ({{ url('moinmoin', 'MoinMoin') }}) to a
+    markdown-based framework ({{ url('docsify', 'Docsify') }}). I organised
+    a {{ url('docathlon', '"docathlon"') }} to solicit help from colleagues
+    in porting the old documentation over to the {{ url('fsl', 'new site')
+    }}, which also doubled as a {{ c('git') }} training workshop for the
+    participants.
+
+  mri_bootcamp: |
+    I have volunteered for a range of public engagement activities; for
+    example, for the past two years I have ran an {{ url('mri_bootcamp',
+    '"MRI analysis bootcamp"') }} for high-school students interested in
+    pursuing scientific studies at University.
+
+  neuroimage: |
+    When my boss {{ url('ni_resign', 'led the resignation of the NeuroImage
+    editorial board in 2023') }}, I did the grunt work behind the scenes to
+    set up an interim journal submission system (based on {{ url('janeway',
+    'Janeway') }}) for the new {{ url('imag_mit', 'Imaging Neuroscience') }}
+    journal. This ran successfully for several months until MIT Press took
+    over management.
+
+  pytreat: |
+    I have taught on, and developed large portions of the materials for our
+    internal {{ url('pytreat', '"PyTreat"') }}, a series of internal
+    Python-based hackathon events, intended to help researchers in getting
+    started with the Python programming language.
+
+  grad_course: |
+    I have held lecturing and tutoring roles on our internal {{
+    url('grad_course', 'MRI Graduate Programme') }}, held annually for the
+    benefit of Oxford-based researchers and PhD students.
+
+  fsl_course: |
+    I have lectured and tutored on the {{ url('fsl_course', 'FSL course')
+    }}, an international course held annually, which teaches MRI analysis
+    using FSL.
+
+  wsn_farm: |
+    a relatively large scale network (70 nodes) deployed for {{
+    url('wsn_farm', 'real time monitoring of soil moisture') }} in a farm
+    environment;
+
+  wsn_marine: |
+    a {{ url('wsn_marine', 'multi-hop underwater sensor network') }}, using
+    acoustic modems for inter-node communication, and a 3G modem for
+    internet uplink
+
+  wsn_salmon: |
+    and a prototype low cost marine wireless sensor node, for deployment in
+    salmon hatcheries.
+
+
+publications:
+  taylor_2025:
+    title:  |
+      Go Figure: Transparency in neuroscience images preserves context and
+      clarifies interpretation
+    author: Taylor et. al. Arxiv [Preprint] 2025
+    url:    https://doi.org/10.48550/arXiv.2504.07824
+    doi:    10.48550/arXiv.2504.07824
+
+  lange_2024:
+    title:  MMORF—FSL's MultiMOdal Registration Framework
+    author: Lange et. al. Imaging Neuroscience 2024
+    url:    http://doi.org/10.1162/imag_a_00100
+    doi:    10.1162/imag_a_00100
+
+  lazari_2024:
+    title:  The mouse motor system contains multiple premotor areas and
+            partially follows human organizational principles
+    author: Lazari et. al. Cell Reports 2024
+    url:    https://doi.org/10.1016/j.celrep.2024.114191
+    doi:    10.1016/j.celrep.2024.114191
+
+  manuello_2024:
+    title:  The effects of genetic and modifiable risk factors on brain
+            regions vulnerable to ageing and disease
+    author: Manuello et. al. Nature Communications 2024
+    url:    http://doi.org/10.1038/s41467-024-46344-2
+    doi:    10.1038/s41467-024-46344-2
+
+  douaud_2022:
+    title:  SARS-CoV-2 is associated with changes in brain structure in UK
+            Biobank
+    author: Douaud et. al. Nature 2022
+    url:    https://doi.org/10.1038/s41586-022-04569-5
+    doi:    10.1038/s41586-022-04569-5
+
+  almagro_2018:
+    title:  Image processing and Quality Control for the first 10,000 brain
+            imaging datasets from UK Biobank
+    author: Alfaro-Almagro et. al. Neuroimage 2018
+    url:    https://doi.org/10.1016/j.neuroimage.2017.10.034
+    doi:    10.1016/j.neuroimage.2017.10.034
+
+  mccarthy_2014:
+    title:  The age-related posterior-anterior shift as revealed by voxelwise
+            analysis of functional brain networks
+    author: McCarthy et. al. Frontiers in Aging neuroscience 2014
+    url:    https://doi.org/10.3389/fnagi.2014.00301
+    doi:    10.3389/fnagi.2014.00301
+
+
+
+urls:
+  armadillo:    https://arma.sourceforge.net
+  armawrap:     https://git.fmrib.ox.ac.uk/fsl/armawrap
+  ccnet:        https://github.com/pauldmccarthy/ccnet
+  conda:        https://docs.conda.io/
+  conda_forge:  https://conda-forge.org/
+  docathlon:    https://git.fmrib.ox.ac.uk/paulmc/fsl-docathlon-2023/
+  docsify:      https://docsify.js.org/
+  fsl:          https://fsl.fmrib.ox.ac.uk/fsl/docs/
+  fsl_ci:       https://fsl.fmrib.ox.ac.uk/fsl/docs/#/development/management/index
+  fsl_course:   https://fsl.fmrib.ox.ac.uk/fslcourse/
+  fsleyes:      https://open.oxcin.ox.ac.uk/pages/fsl/fsleyes/fsleyes/userdoc/
+  funpack:      https://pages.fmrib.ox.ac.uk/fsl/funpack/
+  github:       https://github.com/pauldmccarthy/
+  gitlab:       https://git.fmrib.ox.ac.uk/paulmc/
+  gmail:        mailto:pauldmccarthy@gmail.com
+  grad_course:  https://www.ndcn.ox.ac.uk/study-with-us/graduate-students/fmrib-graduate-programme
+  igzip:        https://github.com/pauldmccarthy/indexed_gzip
+  imag_mit:     https://direct.mit.edu/imag
+  imos_toolbox: https://github.com/aodn/imos-toolbox/
+  ipython:      https://github.com/ipython/ipython/pulls?q=is%3Apr+author%3Apauldmccarthy
+  janeway:      https://github.com/BirkbeckCTP/janeway/
+  libxmlpp_cf:  https://github.com/conda-forge/libxmlpp-feedstock
+  masters:      forensic_analysis_of_mobile_phones.pdf
+  mmorf:        https://git.fmrib.ox.ac.uk/fsl/MMORF
+  moinmoin:     https://github.com/moinwiki
+  mri_bootcamp: https://pages.fmrib.ox.ac.uk/paulmc/oxford_neuroscience_experience/
+  newmat:       https://www.robertnz.net/nm_intro.htm
+  ni_resign:    https://www.nature.com/articles/d41586-023-01391-5
+  nibabel:      https://github.com/nipy/nibabel/pulls?q=is%3Apr+author%3Apauldmccarthy
+  oxcin:        https://www.oxcin.ox.ac.uk
+  oxford_mail:  mailto:paul.mccarthy@ndcn.ox.ac.uk
+  pandas:       https://github.com/pandas-dev/pandas/pull/40180
+  phd:          https://ourarchive.otago.ac.nz/handle/10523/4864
+  pyfeeds:      https://git.fmrib.ox.ac.uk/fsl/pyfeeds
+  pytreat:      https://git.fmrib.ox.ac.uk/fsl/win-pytreat
+  rick:         https://www.ndcn.ox.ac.uk/team/frederik-lange
+  trimesh:      https://github.com/mikedh/trimesh/pulls?q=is%3Apr+pauldmccarthy
+  ukbiobank:    https://www.ukbiobank.ac.uk/
+  wsn_farm:     https://dl.acm.org/doi/10.1145/1435473.1435487
+  wsn_marine:   https://doi.org/10.1109/OCEANSE.2009.5278177
+  wxpython:     https://github.com/wxWidgets/Phoenix/pulls?q=is%3Apr+author%3Apauldmccarthy
+  wxpython_cf:  https://github.com/conda-forge/wxpython-feedstock
+  wxwidgets_cf: https://github.com/conda-forge/wxwidgets-feedstock

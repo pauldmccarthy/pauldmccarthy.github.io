@@ -1,0 +1,33 @@
+<nav id="resume-side-menu" class="fl w-20 fixed f5">
+
+  <div class="pl2">
+    <h1 class="normal">{{ front.title }}</h1>
+    <h2 class="normal">{{ front.subtitle }}</h2>
+  </div>
+
+  <ul class="list i silver pl4">
+    {% for d in front.details %}
+    <li>{{ d }}</li>
+    {% endfor %}
+  </ul>
+
+  <ul class="list pl4">
+    {% for c in front.contact %}
+    <li>{{ url(c.href, c.name) }}</li>
+    {% endfor %}
+    <li><p></li>
+    {% for sect in front.toc %}
+    <li>
+      {% if sect.tagline %}
+      <p>
+        {{ url('#' + sect.href, sect.name) }}
+        <br><span class="i small-caps silver">{{ sect.tagline }}</span>
+      </p>
+      {% else %}
+      {{ url('#' + sect.href, sect.name) }}
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+</div>

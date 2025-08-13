@@ -25,8 +25,8 @@
 
 <body id="{{ page.section }}">
 
-{% if page.title == 'resume' %}
-{% include side_menu.html %}
+{% if page.side_menu %}
+{% include_relative {{ page.side_menu }} %}
 {% endif %}
 
 <div id="site">

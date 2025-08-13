@@ -1,0 +1,205 @@
+\documentclass{resume}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,
+  breaklinks=true,
+  linkcolor={orange!60!black},
+  citecolor={orange!60!black},
+  urlcolor={orange!60!black}
+}
+
+
+\usepackage[font=small,labelfont=bf,margin=1.0in]{caption}
+\renewcommand{\familydefault}{\sfdefault}
+
+\author{ Paul McCarthy }
+
+\address{
+
+10 Newton Street\\
+
+Llanberis, LL55 4HN\\
+
+Wales, United Kingdom\\
+
++44 7474795710\\
+
+}
+{
+
+DOB 26th July 1982\\
+
+Australian citizen\\
+
+UK permanent resident\\
+
+
+\mbox{ \small\url{ https://github.com/pauldmccarthy/ } }\\
+
+\mbox{ \small\url{ https://git.fmrib.ox.ac.uk/paulmc/ } }\\
+
+\href{ mailto:pauldmccarthy@gmail.com }{\small\nolinkurl{ pauldmccarthy@gmail.com }}\\
+
+\href{ mailto:paul.mccarthy@ndcn.ox.ac.uk }{\small\nolinkurl{ paul.mccarthy@ndcn.ox.ac.uk }}\\
+
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{category}{Summary}
+\citemnobullet I am a research software engineer with a wide range of experience in
+different domains and programming languages. I am presently employed
+at the {{ url('oxcin', 'Oxford Centre for Integrative Neuroimaging
+(OxCIN/FMRIB)') }}, where I work on a range of projects related to
+the analysis and visualisation of functional and structural MRI
+data. I have previously held roles in modelling and simulation,
+microcontroller programming, web development, and data analysis.
+\end{category}
+
+\begin{category}{Chronology}
+
+
+
+        \citem{2014-present - Research software engineer}\\
+        \textit{Oxford Centre for Integrative Neuroimaging (OxCIN/FMRIB), UK}\\
+        {My current position involves software development, management, and
+maintenance on a range of projects related to {{ url('fsl', 'FSL') }},
+the FMRIB Software Library.
+
+Some of my software contributions to FMRIB and FSL have been:
+
+{{ project('fsleyes')     }}
+{{ project('fsl_ci')      }}
+{{ project('mmorf')       }}
+{{ project('igzip')       }}
+{{ project('armawrap')    }}
+{{ project('funpack')     }}
+{{ project('pyfeeds')     }}
+{{ project('github')      }}
+{{ project('conda_forge') }}
+
+I have also played an active role in my workplace in teaching,
+public engagement, and generally helping out where I can:
+
+{{ project('docathlon')    }}
+{{ project('mri_bootcamp') }}
+{{ project('neuroimage')   }}
+{{ project('pytreat')      }}
+{{ project('grad_course')  }}
+{{ project('fsl_course')   }}
+
+I have been fortunate enough to be listed as a co-author for my
+technical contributions to a range of academic studies, including:
+
+{{ pub('taylor_2025')   }}
+{{ pub('lange_2024')    }}
+{{ pub('lazari_2024')   }}
+{{ pub('manuello_2024') }}
+{{ pub('douaud_2022')   }}
+{{ pub('almagro_2018')  }}}
+\\
+
+
+
+        \citem{2010-2013 - PhD}\\
+        \textit{Department of Computer Science, University of Otago, Dunedin, New Zealand}\\
+        {My {{ url('phd', 'PhD') }} revolved around the application of graph
+theory techinques to fMRI data, to explore how functional
+connectivity changes with age and the presence of Alzheimer’s
+disease. Part of my PhD work was published in an academic journal:
+
+{{ pub('mccarthy_2014') }}
+
+Most of the code which formed the basis for my analyses was written as
+part of a package I developed called {{ url('ccnet', c('ccnet')) }},
+written in C.
+
+Before migrating my code to C, I used the first 12 months of my PhD as
+an opportunity to teach myself Haskell, but then decided to port all
+of my code to C for more fine-grained control over performance and
+memory usage}
+\\
+
+
+
+        \citem{2007-2010 - Software engineer}\\
+        \textit{CSIRO, Hobart, Australia}\\
+        {
+I worked as the primary software engineer in the deployment of three
+wireless sensor networks in Tasmania, including:
+
+{{ project('wsn_farm')   }}
+{{ project('wsn_marine') }}
+{{ project('wsn_salmon') }}
+
+I played leading roles in each of these projects, working on hardware/
+electronic design and construction, low level system programming and
+routing protocols in C, and data transmission, storage, and real time
+data presentation via a dedicated website, using Java.
+
+As part of another project, I worked on the development of a
+platform-agnostic operating system written primarily in C, for low
+powered wireless devices with 8-bit microcontrollers. I worked on the
+design and development of system and device drivers, including work on
+a bootloader with wireless capabilities, for remote reprogramming.
+
+Before leaving CSIRO to begin my PhD, I worked as the lead developer
+on a MATLAB toolbox for the processing of marine moorings data, with
+the aim of providing a standard output format for data to be hosted by
+the Integrated Marine Observing System (IMOS). I am quite proud of the
+fact that the project is still actively used and developed - it can be
+found at {{ url('https://github.com/aodn/imos-toolbox/') }}}
+\\
+
+
+
+        \citem{2006-2007 - Software engineer}\\
+        \textit{Australian Defence Force Academy, Canberra, Australia}\\
+        {A mixture of software development, maintenance, and experimentation.
+My first project involved the development of a multi-agent system for
+crowd behaviour simulation during panic situations. This entailed the
+implementation (in Java) of the Helbing particle physics model, which
+is a prevalent crowd simulation model. In another project, I developed
+a dynamic social network simulation program, also in Java, which
+provided visualisation of social network simulations, and exporting in
+graph or tabular form of simulation data.}
+\\
+
+
+
+        \citem{2002-2006 - Master of Science}\\
+        \textit{Department of Computer Science, University of South Australia, Adelaide, Australia}\\
+        {I completed a Bachelor of Computer Science with First Class Honours
+(GPA 6.5), and used credit from my Honours degree to progress to a
+Masters degree. My {{ url('masters', 'Masters thesis') }} involved an
+exploration into different methods of acquiring data from mobile
+phones, and the issues involved in presenting this data as forensic
+evidence.}
+\\
+
+
+
+        \citem{Outside of work}\\
+        \textit{Llanberis, North Wales, UK}\\
+        {Most of my free time is spent in the outdoors or at the climbing
+wall. I have spent much of my adult life suffering from an addiction
+to rock climbing and, since moving to North Wales in 2018, have also
+developed an affinity for fell running and scrambling. I also enjoy
+mountain biking, surfing, and snowboarding when conditions and time
+allow. I occasionally post photos and trip reports at {{
+url('https://pauldmccarthy.github.io/') }}.
+
+I am a keen but mediocre guitarist, and also enjoy board games, chess,
+reading novels, and {{ i('very') }} occasionally hacking on hobby
+coding projects that usually lead nowhere.}
+\\
+
+
+
+\end{category}
+\end{document}

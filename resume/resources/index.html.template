@@ -1,0 +1,22 @@
+---
+title:     Paul McCarthy - CV
+layout:    page
+side_menu: side_menu.html
+---
+
+<!-- For jekyll/liquid rendering -->
+{% raw %}
+{% include JB/setup %}
+{% endraw %}
+
+{{ abstract }}
+
+<hr>
+
+{% for section in sections %}
+{{ section }}
+
+{% if not loop.last %}
+<hr>
+{% endif %}
+{% endfor %}
