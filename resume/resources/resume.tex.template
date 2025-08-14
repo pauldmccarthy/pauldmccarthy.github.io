@@ -39,12 +39,14 @@
 \citemnobullet [[ abstract ]]
 \end{category}
 
-\begin{category}{Chronology}
-
 [% for sect in sections %]
-[[ sect ]]\\
+
+[[ sect ]]
 
 [% endfor %]
 
+\begin{category}{References}
+\citemnobullet I am happy to provide references on request.
 \end{category}
+
 \end{document}

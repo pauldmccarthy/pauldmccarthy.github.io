@@ -3,15 +3,15 @@
 % written by Miklos Csuros csuros@cs.yale.edu
 %
 % features
-% 
+%
 % 1	\address[2] command for home and office address
 %
 % 2	category environment for resume sections
-%       
+%
 %       \citem[1]  	for items of the section with argument emphasized
 %       \citemnobullet 	for items of the section without a bullet
 %       \citembullet    for items of the section with bullet & no emphasis
-% 
+%
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{resume}[1997/02/07 v1.1 resume class]
@@ -22,18 +22,20 @@
 \ProcessOptions
 \LoadClass{article}
 
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
 
 
 % -------------------------------------------------------
 %  The following definitions can be changed in the LaTeX
-%  file for a different look but the same structure. The 
-%  rest of this file defines the structure and the 
+%  file for a different look but the same structure. The
+%  rest of this file defines the structure and the
 %  commands.
 % -------------------------------------------------------
 
 \newcommand{\titlenamefont}{\bf\LARGE}	% the font used to print the name
 					% on the top of the 1st page
-\newcommand{\categoryfont}{\sl}		% font used to print the category
+\newcommand{\categoryfont}{\bf}		% font used to print the category
 					% names
 \newcommand{\labelcitem}{\labelitemi}	% the bullet produced by \citem or
 					% \citembullet
@@ -59,26 +61,28 @@
 % - new commands
 % -------------------------------------------------------
 
-%%%%%%% \address                                       
+%%%%%%% \address
 \gdef\@addressA{\ClassWarning{resume}{%
-	No address given.\MessageBreak
-	Use \protect\address.}}
+    No address given.\MessageBreak
+    Use \protect\address.}}
 \newcommand{\address}[2]{\gdef\@addressA{#1}\gdef\@addressB{#2}}
 
 %%%%%%% \author
 \gdef\@author{\ClassError{resume}{%
-	No author given.}{%
-	Use \protect\author\space to specify it.}}
+    No author given.}{%
+    Use \protect\author\space to specify it.}}
 
 %%%%%% category environment
 \newif{\if@firstitem}
 \newenvironment{category}[1]%
    {\@firstitemtrue
-   \def\makecategorytitle{%
-   	\marginpar{\categoryfont\raggedright #1}}
+     \def\makecategorytitle{%
+       \begin{changemargin}{-0.5in}{0.5in}
+         \categoryfont\raggedright #1
+       \end{changemargin}}
    \par
    \begin{list}{}{%
-      \setlength{\leftmargin}{0in}	% no extra left margin before bullets
+      \setlength{\leftmargin}{0in}    % no extra left margin before bullets
       \setlength{\parsep}{0in}
       }}
    {\end{list}}
@@ -95,12 +99,12 @@
 
 %%%%%%% \citemnobullet
 \newcommand{\citemnobullet}{%
-	\if@firstitem
-		\item[] \leavevmode\makecategorytitle
-	\else
-		\item[]
-	\fi
-	\@firstitemfalse}
+    \if@firstitem
+        \item[] \leavevmode\makecategorytitle
+    \else
+        \item[]
+    \fi
+    \@firstitemfalse}
 
 %%%%%%% \citembullet
 \newcommand{\citembullet}{%
@@ -113,8 +117,8 @@
 
 %%%%%%% \maketitle
 \renewcommand{\maketitle}{%
-	\setlength{\titlewidth}{\textwidth}
-	\setlength{\addresswidth}{.5\textwidth}
+    \setlength{\titlewidth}{\textwidth}
+    \setlength{\addresswidth}{.5\textwidth}
   \begingroup
     \if@twocolumn
       \ifnum \col@number=\@ne
@@ -135,24 +139,23 @@
       \markright{\hfill\@author\hfill}
   \fi
   \pagestyle{myheadings}
-  \renewcommand{\thepage}{}	% because only the name is 
-  				% needed in the heading and no pagenumbers
-  
+  \renewcommand{\thepage}{}    % because only the name is
+                  % needed in the heading and no pagenumbers
+
   \setcounter{footnote}{0}%
   \let\thanks\relax
   \let\maketitle\relax\let\@makeresumetitle\relax
   \gdef\@thanks{}\gdef\@author{}\gdef\@title{}}
-  
+
 \def\@makeresumetitle{%
   \newpage
   \null
-	\def\@moveleft{\hspace*{-\marginparwidth}\hspace*{-\marginparsep}}
+    \def\@moveleft{\hspace*{-\marginparwidth}\hspace*{-\marginparsep}}
   \@moveleft\makebox[\titlewidth]{\titlenamefont\@author}\\
   \@moveleft
-  	\parbox[t]{\addresswidth}{\begin{flushleft}\@addressA\end{flushleft}}\hfill%
+      \parbox[t]{\addresswidth}{\begin{flushleft}\@addressA\end{flushleft}}\hfill%
   \parbox[t]{\addresswidth}{\begin{flushright}\@addressB\end{flushright}}
   \par
   \vskip 1.5em}
-  
-\endinput
 
+\endinput

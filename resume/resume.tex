@@ -37,13 +37,13 @@ Australian citizen\\
 UK permanent resident\\
 
 
-\mbox{ \small\url{ https://github.com/pauldmccarthy/ } }\\
+\mbox{\small\url{https://github.com/pauldmccarthy/}}\\
 
-\mbox{ \small\url{ https://git.fmrib.ox.ac.uk/paulmc/ } }\\
+\mbox{\small\url{https://git.fmrib.ox.ac.uk/paulmc/}}\\
 
-\href{ mailto:pauldmccarthy@gmail.com }{\small\nolinkurl{ pauldmccarthy@gmail.com }}\\
+\href{mailto:pauldmccarthy@gmail.com}{\small\nolinkurl{pauldmccarthy@gmail.com}}\\
 
-\href{ mailto:paul.mccarthy@ndcn.ox.ac.uk }{\small\nolinkurl{ paul.mccarthy@ndcn.ox.ac.uk }}\\
+\href{mailto:paul.mccarthy@ndcn.ox.ac.uk}{\small\nolinkurl{paul.mccarthy@ndcn.ox.ac.uk}}\\
 
 }
 
@@ -54,152 +54,231 @@ UK permanent resident\\
 \begin{category}{Summary}
 \citemnobullet I am a research software engineer with a wide range of experience in
 different domains and programming languages. I am presently employed
-at the {{ url('oxcin', 'Oxford Centre for Integrative Neuroimaging
-(OxCIN/FMRIB)') }}, where I work on a range of projects related to
+at the \href{https://www.oxcin.ox.ac.uk}{Oxford Centre for Integrative Neuroimaging
+(OxCIN/FMRIB)}, where I work on a range of projects related to
 the analysis and visualisation of functional and structural MRI
 data. I have previously held roles in modelling and simulation,
 microcontroller programming, web development, and data analysis.
 \end{category}
 
-\begin{category}{Chronology}
 
 
+\begin{category}{2014-present - Research software engineer}
+\citemnobullet \textit{Oxford Centre for Integrative Neuroimaging (OxCIN/FMRIB), UK}
 
-        \citem{2014-present - Research software engineer}\\
-        \textit{Oxford Centre for Integrative Neuroimaging (OxCIN/FMRIB), UK}\\
-        {My current position involves software development, management, and
-maintenance on a range of projects related to {{ url('fsl', 'FSL') }},
-the FMRIB Software Library.
+\citemnobullet My current position involves software development, management, and
+maintenance on a range of projects related to \href{https://fsl.fmrib.ox.ac.uk/fsl/docs/}{FSL},
+the FMRIB Software Library.\newline
 
-Some of my software contributions to FMRIB and FSL have been:
+Some of my software contributions to FMRIB and FSL have been:\newline
 
-{{ project('fsleyes')     }}
-{{ project('fsl_ci')      }}
-{{ project('mmorf')       }}
-{{ project('igzip')       }}
-{{ project('armawrap')    }}
-{{ project('funpack')     }}
-{{ project('pyfeeds')     }}
-{{ project('github')      }}
-{{ project('conda_forge') }}
+\begin{itemize}
+\item \href{https://open.oxcin.ox.ac.uk/pages/fsl/fsleyes/fsleyes/userdoc/}{\textbf{FSLeyes}} - an interactive OpenGL-based
+desktop application for visualisation of 3D and 4D MRI data, written
+in Python.
+\item \href{https://fsl.fmrib.ox.ac.uk/fsl/docs/#/development/management/index}{\textbf{The FSL build system}} - an automated modular
+build system for FSL, based on the \href{https://docs.conda.io/}{conda}
+environment and package manager, inspired by the \href{https://conda-forge.org/}{conda-forge} package ecosystem, and making extensive use of
+GitLab CI and Amazon AWS. As part of this work I also added support
+for building FSL on Apple Silicon, and made substantial improvements
+to the build processes for our C++/CUDA applications to achieve
+compatibilty across a wide range of GPU hardware
+\item \href{https://git.fmrib.ox.ac.uk/fsl/MMORF}{\textbf{MMORF}} - a CUDA-accelerated C++ application
+for non-linear registration of MRI images, designed and developed by
+my colleague \href{https://www.ndcn.ox.ac.uk/team/frederik-lange}{Frederik Lange}. I ported the
+codebase to pure C++, using the \texttt{std::thread} library for
+parallelism, in order to allow MMORF to be used on a wider range of
+platforms, and to take advantage of lower cost cloud-based compute
+instances when running at scale.
+\item \href{https://github.com/pauldmccarthy/indexed_gzip}{\texttt{indexed\_gzip}} - a Python library for fast
+random access of gzip files, written in C and Cython.
+\item \href{https://git.fmrib.ox.ac.uk/fsl/armawrap}{\texttt{armawrap}} - a C++ header-only library for
+supporting legacy code that was written against the \href{https://www.robertnz.net/nm_intro.htm}{Newmat} linear algebra library but which, under the hood, uses
+the more modern \href{https://arma.sourceforge.net}{Armadillo} linear algebra
+library.
+\item \href{https://pages.fmrib.ox.ac.uk/fsl/funpack/}{\textbf{FUNPACK}}, a Python-based command-line
+application for working with very large CSV files from the \href{https://www.ukbiobank.ac.uk/}{UK Biobank}.
+\item \href{https://git.fmrib.ox.ac.uk/fsl/pyfeeds}{\texttt{pyfeeds}}, a bespoke testing framework used
+to run our internal suite of integration tests, which supports custom
+evaluation rules, and can execute tests in parallel on a HPC cluster.
+\end{itemize}
+
+Most of the software I develop is open-source, and I actively use and
+contribute to open-source projects:\newline
+
+\begin{itemize}
+\item During development of my own projects, I have made many small
+contributions to a number of open source projects, such as \href{https://github.com/nipy/nibabel/pulls?q=is%3Apr+author%3Apauldmccarthy}{\texttt{nibabel}}, \href{https://github.com/wxWidgets/Phoenix/pulls?q=is%3Apr+author%3Apauldmccarthy}{\texttt{wxPython}},
+\href{https://github.com/ipython/ipython/pulls?q=is%3Apr+author%3Apauldmccarthy}{\texttt{IPython}}, \href{https://github.com/pandas-dev/pandas/pull/40180}{\texttt{pandas}},
+and \href{https://github.com/mikedh/trimesh/pulls?q=is%3Apr+pauldmccarthy}{\texttt{trimesh}}.
+\item I have played an active role in the \href{https://conda-forge.org/}{conda-forge} package ecosystem, having used conda-forge to
+publish my own software, and being added to the maintainence team for
+a number of other packages, such as \href{https://github.com/conda-forge/wxwidgets-feedstock}{\texttt{wxwidgets}}, \href{https://github.com/conda-forge/wxpython-feedstock}{\texttt{wxPython}}, and \href{https://github.com/conda-forge/libxmlpp-feedstock}{\texttt{libxml++}}.
+\end{itemize}
 
 I have also played an active role in my workplace in teaching,
-public engagement, and generally helping out where I can:
+public engagement, and generally helping out where I can:\newline
 
-{{ project('docathlon')    }}
-{{ project('mri_bootcamp') }}
-{{ project('neuroimage')   }}
-{{ project('pytreat')      }}
-{{ project('grad_course')  }}
-{{ project('fsl_course')   }}
+\begin{itemize}
+\item In 2023 I organised and led an effort to migrate the FSL documentation
+from an old Wiki framework (\href{https://github.com/moinwiki}{MoinMoin}) to a
+markdown-based framework (\href{https://docsify.js.org/}{Docsify}). I organised
+a \href{https://git.fmrib.ox.ac.uk/paulmc/fsl-docathlon-2023/}{"docathlon"} to solicit help from colleagues
+in porting the old documentation over to the \href{https://fsl.fmrib.ox.ac.uk/fsl/docs/}{new site}, which also doubled as a \texttt{git} training workshop for the
+participants.
+\item I have volunteered for a range of public engagement activities; for
+example, for the past two years I have ran an \href{https://pages.fmrib.ox.ac.uk/paulmc/oxford_neuroscience_experience/}{"MRI analysis bootcamp"} for high-school students interested in
+pursuing scientific studies at University.
+\item When my boss \href{https://www.nature.com/articles/d41586-023-01391-5}{led the resignation of the NeuroImage
+editorial board in 2023}, I did the grunt work behind the scenes to
+set up an interim journal submission system (based on \href{https://github.com/BirkbeckCTP/janeway/}{Janeway}) for the new \href{https://direct.mit.edu/imag}{Imaging Neuroscience}
+journal. This ran successfully for several months until MIT Press took
+over management.
+\item I have taught on, and developed large portions of the materials for our
+internal \href{https://git.fmrib.ox.ac.uk/fsl/win-pytreat}{"PyTreat"}, a series of internal
+Python-based hackathon events, intended to help researchers in getting
+started with the Python programming language.
+\item I have held lecturing and tutoring roles on our internal \href{https://www.ndcn.ox.ac.uk/study-with-us/graduate-students/fmrib-graduate-programme}{MRI Graduate Programme}, held annually for the
+benefit of Oxford-based researchers and PhD students.
+\item I have lectured and tutored on the \href{https://fsl.fmrib.ox.ac.uk/fslcourse/}{FSL course}, an international course held annually, which teaches MRI analysis
+using FSL.
+\end{itemize}
 
 I have been fortunate enough to be listed as a co-author for my
-technical contributions to a range of academic studies, including:
+technical contributions to a range of academic studies, including:\newline
 
-{{ pub('taylor_2025')   }}
-{{ pub('lange_2024')    }}
-{{ pub('lazari_2024')   }}
-{{ pub('manuello_2024') }}
-{{ pub('douaud_2022')   }}
-{{ pub('almagro_2018')  }}}
-\\
+\begin{itemize}
+\item \indent Go Figure: Transparency in neuroscience images preserves context and
+clarifies interpretation
+\newline
+\item \indent MMORF—FSL's MultiMOdal Registration Framework\newline
+\item \indent The mouse motor system contains multiple premotor areas and partially follows human organizational principles\newline
+\item \indent The effects of genetic and modifiable risk factors on brain regions vulnerable to ageing and disease\newline
+\item \indent SARS-CoV-2 is associated with changes in brain structure in UK Biobank\newline
+\item \indent Image processing and Quality Control for the first 10,000 brain imaging datasets from UK Biobank\newline
+\end{itemize}
+
+\end{category}
 
 
 
-        \citem{2010-2013 - PhD}\\
-        \textit{Department of Computer Science, University of Otago, Dunedin, New Zealand}\\
-        {My {{ url('phd', 'PhD') }} revolved around the application of graph
+
+\begin{category}{2010-2013 - PhD}
+\citemnobullet \textit{Department of Computer Science, University of Otago, Dunedin, New Zealand}
+
+\citemnobullet My \href{https://ourarchive.otago.ac.nz/handle/10523/4864}{PhD} revolved around the application of graph
 theory techinques to fMRI data, to explore how functional
 connectivity changes with age and the presence of Alzheimer’s
-disease. Part of my PhD work was published in an academic journal:
+disease. Part of my PhD work was published in an academic journal:\newline
 
-{{ pub('mccarthy_2014') }}
+\indent The age-related posterior-anterior shift as revealed by voxelwise analysis of functional brain networks\newline\newline
 
 Most of the code which formed the basis for my analyses was written as
-part of a package I developed called {{ url('ccnet', c('ccnet')) }},
-written in C.
+part of a package I developed called \href{https://github.com/pauldmccarthy/ccnet}{\texttt{ccnet}},
+written in C.\newline
 
 Before migrating my code to C, I used the first 12 months of my PhD as
 an opportunity to teach myself Haskell, but then decided to port all
 of my code to C for more fine-grained control over performance and
-memory usage}
-\\
+memory usage
+
+\end{category}
 
 
 
-        \citem{2007-2010 - Software engineer}\\
-        \textit{CSIRO, Hobart, Australia}\\
-        {
-I worked as the primary software engineer in the deployment of three
-wireless sensor networks in Tasmania, including:
 
-{{ project('wsn_farm')   }}
-{{ project('wsn_marine') }}
-{{ project('wsn_salmon') }}
+\begin{category}{2007-2010 - Software engineer}
+\citemnobullet \textit{CSIRO, Hobart, Australia}
+
+\citemnobullet I worked as the primary software engineer in the deployment of three
+wireless sensor networks in Tasmania, including:\newline
+
+\begin{itemize}
+\item a relatively large scale network (70 nodes) deployed for \href{https://dl.acm.org/doi/10.1145/1435473.1435487}{real time monitoring of soil moisture} in a farm
+environment;
+\item a \href{https://doi.org/10.1109/OCEANSE.2009.5278177}{multi-hop underwater sensor network}, using
+acoustic modems for inter-node communication, and a 3G modem for
+internet uplink
+\item and a prototype low cost marine wireless sensor node, for deployment in
+salmon hatcheries.
+\end{itemize}
 
 I played leading roles in each of these projects, working on hardware/
 electronic design and construction, low level system programming and
 routing protocols in C, and data transmission, storage, and real time
-data presentation via a dedicated website, using Java.
+data presentation via a dedicated website, using Java.\newline
 
 As part of another project, I worked on the development of a
 platform-agnostic operating system written primarily in C, for low
 powered wireless devices with 8-bit microcontrollers. I worked on the
 design and development of system and device drivers, including work on
-a bootloader with wireless capabilities, for remote reprogramming.
+a bootloader with wireless capabilities, for remote reprogramming.\newline
 
 Before leaving CSIRO to begin my PhD, I worked as the lead developer
 on a MATLAB toolbox for the processing of marine moorings data, with
 the aim of providing a standard output format for data to be hosted by
 the Integrated Marine Observing System (IMOS). I am quite proud of the
 fact that the project is still actively used and developed - it can be
-found at {{ url('https://github.com/aodn/imos-toolbox/') }}}
-\\
+found at \mbox{\small\url{https://github.com/aodn/imos-toolbox/}}
+
+\end{category}
 
 
 
-        \citem{2006-2007 - Software engineer}\\
-        \textit{Australian Defence Force Academy, Canberra, Australia}\\
-        {A mixture of software development, maintenance, and experimentation.
+
+\begin{category}{2006-2007 - Software engineer}
+\citemnobullet \textit{Australian Defence Force Academy, Canberra, Australia}
+
+\citemnobullet A mixture of software development, maintenance, and experimentation.
 My first project involved the development of a multi-agent system for
 crowd behaviour simulation during panic situations. This entailed the
 implementation (in Java) of the Helbing particle physics model, which
 is a prevalent crowd simulation model. In another project, I developed
 a dynamic social network simulation program, also in Java, which
 provided visualisation of social network simulations, and exporting in
-graph or tabular form of simulation data.}
-\\
+graph or tabular form of simulation data.
+
+\end{category}
 
 
 
-        \citem{2002-2006 - Master of Science}\\
-        \textit{Department of Computer Science, University of South Australia, Adelaide, Australia}\\
-        {I completed a Bachelor of Computer Science with First Class Honours
+
+\begin{category}{2002-2006 - Master of Science}
+\citemnobullet \textit{Department of Computer Science, University of South Australia, Adelaide, Australia}
+
+\citemnobullet I completed a Bachelor of Computer Science with First Class Honours
 (GPA 6.5), and used credit from my Honours degree to progress to a
-Masters degree. My {{ url('masters', 'Masters thesis') }} involved an
+Masters degree. My \href{forensic_analysis_of_mobile_phones.pdf}{Masters thesis} involved an
 exploration into different methods of acquiring data from mobile
 phones, and the issues involved in presenting this data as forensic
-evidence.}
-\\
+evidence.
+
+\end{category}
 
 
 
-        \citem{Outside of work}\\
-        \textit{Llanberis, North Wales, UK}\\
-        {Most of my free time is spent in the outdoors or at the climbing
+
+\begin{category}{Outside of work}
+\citemnobullet \textit{Llanberis, North Wales, UK}
+
+\citemnobullet Most of my free time is spent in the outdoors or at the climbing
 wall. I have spent much of my adult life suffering from an addiction
 to rock climbing and, since moving to North Wales in 2018, have also
 developed an affinity for fell running and scrambling. I also enjoy
 mountain biking, surfing, and snowboarding when conditions and time
-allow. I occasionally post photos and trip reports at {{
-url('https://pauldmccarthy.github.io/') }}.
+allow. I occasionally post photos and trip reports at \mbox{\small\url{https://pauldmccarthy.github.io/}}.\newline
 
 I am a keen but mediocre guitarist, and also enjoy board games, chess,
-reading novels, and {{ i('very') }} occasionally hacking on hobby
-coding projects that usually lead nowhere.}
-\\
-
-
+reading novels, and \textit{very} occasionally hacking on hobby
+coding projects that usually lead nowhere.
 
 \end{category}
+
+
+
+
+\begin{category}{References}
+\citemnobullet I am happy to provide references on request.
+\end{category}
+
 \end{document}

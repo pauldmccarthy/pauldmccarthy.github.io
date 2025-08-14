@@ -60,36 +60,25 @@ sections:
 
       Some of my software contributions to FMRIB and FSL have been:
 
-      {{ project('fsleyes')     }}
-      {{ project('fsl_ci')      }}
-      {{ project('mmorf')       }}
-      {{ project('igzip')       }}
-      {{ project('armawrap')    }}
-      {{ project('funpack')     }}
-      {{ project('pyfeeds')     }}
-      {{ project('github')      }}
-      {{ project('conda_forge') }}
+      {{ itemise('projects', 'fsleyes', 'fsl_ci', 'mmorf', 'igzip',
+                 'armawrap', 'funpack', 'pyfeeds') }}
+
+      Most of the software I develop is open-source, and I actively use and
+      contribute to open-source projects:
+
+      {{ itemise('projects', 'github', 'conda_forge') }}
 
       I have also played an active role in my workplace in teaching,
       public engagement, and generally helping out where I can:
 
-      {{ project('docathlon')    }}
-      {{ project('mri_bootcamp') }}
-      {{ project('neuroimage')   }}
-      {{ project('pytreat')      }}
-      {{ project('grad_course')  }}
-      {{ project('fsl_course')   }}
+      {{ itemise('projects', 'docathlon', 'mri_bootcamp', 'neuroimage',
+                 'pytreat', 'grad_course', 'fsl_course') }}
 
       I have been fortunate enough to be listed as a co-author for my
       technical contributions to a range of academic studies, including:
 
-      {{ pub('taylor_2025')   }}
-      {{ pub('lange_2024')    }}
-      {{ pub('lazari_2024')   }}
-      {{ pub('manuello_2024') }}
-      {{ pub('douaud_2022')   }}
-      {{ pub('almagro_2018')  }}
-
+      {{ itemise('publications', 'taylor_2025', 'lange_2024', 'lazari_2024',
+                 'manuello_2024', 'douaud_2022', 'almagro_2018') }}
 
   - id:       2010-2013
     title:    2010-2013 - PhD
@@ -123,9 +112,7 @@ sections:
       I worked as the primary software engineer in the deployment of three
       wireless sensor networks in Tasmania, including:
 
-      {{ project('wsn_farm')   }}
-      {{ project('wsn_marine') }}
-      {{ project('wsn_salmon') }}
+      {{ itemise('projects', 'wsn_farm', 'wsn_marine', 'wsn_salmon') }}
 
       I played leading roles in each of these projects, working on hardware/
       electronic design and construction, low level system programming and
@@ -197,7 +184,6 @@ projects:
     icon_url: https://git.fmrib.ox.ac.uk/fsl/fsleyes/fsleyes/
     tagline:  Python, OpenGL, GLSL, wxPython, numpy, matplotlib
     content: |
-
       {{ url('fsleyes', b('FSLeyes')) }} - an interactive OpenGL-based
       desktop application for visualisation of 3D and 4D MRI data, written
       in Python.
@@ -212,9 +198,9 @@ projects:
       environment and package manager, inspired by the {{ url('conda_forge',
       'conda-forge') }} package ecosystem, and making extensive use of
       GitLab CI and Amazon AWS. As part of this work I also added support
-      for building FSL on Apple Silicon, and made substantial improvements
-      to the build processes for our C++/CUDA applications to achieve
-      compatibilty across a wide range of GPU hardware
+      for building FSL on Apple Silicon and Linux aarch64 platforms, and
+      made substantial improvements to the build processes for our C++/CUDA
+      applications to achieve compatibilty across a wide range of GPU hardware.
 
   mmorf:
     icon:     mmorf.png

@@ -132,8 +132,19 @@ def html():
 
 def latex():
 
+    def preproc(text):
+        # strip whitespace from each line
+        text  = text.strip()
+        lines = [l.strip() for l in text.split('\n')]
+        text  = '\n'.join(lines)
+        # double newline -> para
+        return text.replace('\n\n', r'\newline' + '\n\n')
+
+    def postproc(text):
+        return text.replace(r'}\newline', '}')
+
     def code(text):
-        return rf'\texttt{{{text}}}'
+        return rf'\texttt{{{text}}}'.replace('_', r'\_')
 
     def italic(text):
         return rf'\textit{{{text}}}'
@@ -144,28 +155,42 @@ def latex():
     def url(href, title=None):
         if href.startswith('mailto:'):
             title = href[7:]
-            return rf'\href{{ {href} }}{{\small\nolinkurl{{ {title} }}}}'
+            return rf'\href{{{href}}}{{\small\nolinkurl{{{title}}}}}'
 
         else:
             if title is not None:
-                return rf'\href{{ {href} }}{{ {title} }}'
+                return rf'\href{{{href}}}{{{title}}}'
             else:
-                return rf'\mbox{{ \small\url{{ {href} }} }}'
+                return rf'\mbox{{\small\url{{{href}}}}}'
 
     def pub(title, author, url, doi):
-        return rf'\citembullet {title}'
+        # TODO
+        return rf'\indent {title}\newline'
 
     def project(content, **_):
-        return rf'\citembullet {content}'
+        return postproc(preproc(content))
+
+    def itemise(*items):
+        lines = [r'\begin{itemize}']
+
+        for item in items:
+            lines += [rf'\item {item}']
+
+        lines += [r'\end{itemize}']
+
+        return '\n'.join(lines)
 
     def section(title, subtitle, content, **_):
-        return tw.dedent(rf"""
-        \citem{{{title}}}\\
-        \textit{{{subtitle}}}\\
-        {{{content}}}
-        """)
+        content = postproc(preproc(content))
+        return '\n'.join([
+            rf'\begin{{category}}{{{title}}}',
+            rf'\citemnobullet \textit{{{subtitle}}}',
+            '',
+            rf'\citemnobullet {content}',
+            '',
+            r'\end{category}',
+            ''])
 
-    # TODO need to replaces "{{" "{%" etc in yaml file
     env_params = {
         'block_start_string'    : '[%',
         'block_end_string'      : '%]',
@@ -184,6 +209,7 @@ def latex():
         'i'           : italic,
         'code'        : code,
         'c'           : code,
+        'itemise_raw' : itemise,
         'pub_raw'     : pub,
         'project_raw' : project,
         'section'     : section
@@ -204,11 +230,26 @@ def render(contents, env_params, renderer):
         details = contents['projects'][pid]
         return renderer['project_raw'](**details)
 
+    def itemise(itype, *items):
+
+        if itype == 'projects':
+            items = [project(p) for p in items]
+        elif itype == 'publications':
+            items = [pub(p) for p in items]
+        else:
+            items = [itype] + list(items)
+
+        if 'itemise_raw' in renderer:
+            return renderer['itemise_raw'](*items)
+        else:
+            return '\n\n'.join(items)
+
     renderer = dict(renderer)
     renderer.update({
         'url'          : url,
         'pub'          : pub,
         'project'      : project,
+        'itemise'      : itemise,
         'urls'         : contents['urls'],
         'publications' : contents['publications'],
     })
@@ -271,8 +312,18 @@ def main():
     else: raise RuntimeError(f'Unrecognised output format: {format}')
 
     with open(infile, 'rt') as f:
-        contents = yaml.load(f.read(), Loader=yaml.Loader)
+        contents = f.read()
 
+    if 'block_start_string' in env_params:
+        contents = contents.replace('{%', env_params['block_start_string'])
+    if 'block_end_string' in env_params:
+        contents = contents.replace('%}', env_params['block_end_string'])
+    if 'variable_start_string' in env_params:
+        contents = contents.replace('{{', env_params['variable_start_string'])
+    if 'variable_end_string' in env_params:
+        contents = contents.replace('}}', env_params['variable_end_string'])
+
+    contents = yaml.load(contents, Loader=yaml.Loader)
     rendered = render(contents, env_params, renderer)
 
     for filename, file_contents in rendered.items():
