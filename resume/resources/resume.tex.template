@@ -39,6 +39,22 @@
 \citemnobullet [[ abstract ]]
 \end{category}
 
+
+\begin{category}{Timeline}
+\citemnobullet
+
+%% \begin{itemize}
+
+[% for sect in raw_sections[:-1] %]
+
+\item[] \textbf{[[ sect.title ]]}\newline\textit{[[sect.subtitle]]}
+
+[% endfor %]
+
+%% \end{itemize}
+
+\end{category}
+
 [% for sect in sections %]
 
 [[ sect ]]

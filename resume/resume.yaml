@@ -332,50 +332,64 @@ publications:
     title:  |
       Go Figure: Transparency in neuroscience images preserves context and
       clarifies interpretation
-    author: Taylor et. al. Arxiv [Preprint] 2025
-    url:    https://doi.org/10.48550/arXiv.2504.07824
-    doi:    10.48550/arXiv.2504.07824
+    author:  Taylor et. al.
+    journal: Arxiv [Preprint]
+    year:    2025
+    url:     https://doi.org/10.48550/arXiv.2504.07824
+    doi:     10.48550/arXiv.2504.07824
 
   lange_2024:
-    title:  MMORF—FSL's MultiMOdal Registration Framework
-    author: Lange et. al. Imaging Neuroscience 2024
-    url:    http://doi.org/10.1162/imag_a_00100
-    doi:    10.1162/imag_a_00100
+    title:   MMORF—FSL's MultiMOdal Registration Framework
+    author:  Lange et. al.
+    journal: Imaging Neuroscience
+    year:    2024
+    url:     http://doi.org/10.1162/imag_a_00100
+    doi:     10.1162/imag_a_00100
 
   lazari_2024:
-    title:  The mouse motor system contains multiple premotor areas and
-            partially follows human organizational principles
-    author: Lazari et. al. Cell Reports 2024
-    url:    https://doi.org/10.1016/j.celrep.2024.114191
-    doi:    10.1016/j.celrep.2024.114191
+    title:   The mouse motor system contains multiple premotor areas and
+             partially follows human organizational principles
+    author:  Lazari et. al.
+    journal: Cell Reports
+    year:    2024
+    url:     https://doi.org/10.1016/j.celrep.2024.114191
+    doi:     10.1016/j.celrep.2024.114191
 
   manuello_2024:
-    title:  The effects of genetic and modifiable risk factors on brain
-            regions vulnerable to ageing and disease
-    author: Manuello et. al. Nature Communications 2024
-    url:    http://doi.org/10.1038/s41467-024-46344-2
-    doi:    10.1038/s41467-024-46344-2
+    title:   The effects of genetic and modifiable risk factors on brain
+             regions vulnerable to ageing and disease
+    author:  Manuello et. al.
+    journal: Nature Communications
+    year:    2024
+    url:     http://doi.org/10.1038/s41467-024-46344-2
+    doi:     10.1038/s41467-024-46344-2
 
   douaud_2022:
-    title:  SARS-CoV-2 is associated with changes in brain structure in UK
-            Biobank
-    author: Douaud et. al. Nature 2022
-    url:    https://doi.org/10.1038/s41586-022-04569-5
-    doi:    10.1038/s41586-022-04569-5
+    title:   SARS-CoV-2 is associated with changes in brain structure in UK
+             Biobank
+    author:  Douaud et. al.
+    journal: Nature
+    year:    2022
+    url:     https://doi.org/10.1038/s41586-022-04569-5
+    doi:     10.1038/s41586-022-04569-5
 
   almagro_2018:
-    title:  Image processing and Quality Control for the first 10,000 brain
-            imaging datasets from UK Biobank
-    author: Alfaro-Almagro et. al. Neuroimage 2018
-    url:    https://doi.org/10.1016/j.neuroimage.2017.10.034
-    doi:    10.1016/j.neuroimage.2017.10.034
+    title:   Image processing and Quality Control for the first 10,000 brain
+             imaging datasets from UK Biobank
+    author:  Alfaro-Almagro et. al.
+    journal: Neuroimage
+    year:    2018
+    url:     https://doi.org/10.1016/j.neuroimage.2017.10.034
+    doi:     10.1016/j.neuroimage.2017.10.034
 
   mccarthy_2014:
-    title:  The age-related posterior-anterior shift as revealed by voxelwise
-            analysis of functional brain networks
-    author: McCarthy et. al. Frontiers in Aging neuroscience 2014
-    url:    https://doi.org/10.3389/fnagi.2014.00301
-    doi:    10.3389/fnagi.2014.00301
+    title:   The age-related posterior-anterior shift as revealed by voxelwise
+             analysis of functional brain networks
+    author:  McCarthy et. al.
+    journal: Frontiers in Aging neuroscience
+    year:    2014
+    url:     https://doi.org/10.3389/fnagi.2014.00301
+    doi:     10.3389/fnagi.2014.00301
 
 
 

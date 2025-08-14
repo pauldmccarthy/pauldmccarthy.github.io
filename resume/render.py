@@ -68,11 +68,11 @@ def html():
             '</div>',
             '</div>'])
 
-    def pub(title, author, url, doi):
+    def pub(title, author, url, doi, journal, year):
         return tw.dedent(f"""
         <p class="ma3">
         <span class="small-caps">{title}</span>
-        <span class="f7 i silver">{author}
+        <span class="f7 i silver">{author} {journal} {year}
         <a href="{url}">{doi}</a>
         </span>
         </p>
@@ -152,7 +152,7 @@ def latex():
     def bold(text):
         return rf'\textbf{{{text}}}'
 
-    def url(href, title=None):
+    def url_raw(href, title=None):
         if href.startswith('mailto:'):
             title = href[7:]
             return rf'\href{{{href}}}{{\small\nolinkurl{{{title}}}}}'
@@ -163,9 +163,9 @@ def latex():
             else:
                 return rf'\mbox{{\small\url{{{href}}}}}'
 
-    def pub(title, author, url, doi):
-        # TODO
-        return rf'\indent {title}\newline'
+    def pub(title, author, url, doi, journal, year):
+        url = url_raw(url)
+        return rf'\textbf{{{title}}} \textit{{{author} {journal} {year}}} {url}'
 
     def project(content, **_):
         return postproc(preproc(content))
@@ -202,7 +202,7 @@ def latex():
 
     return env_params, {
         'templates'   : templates,
-        'url_raw'     : url,
+        'url_raw'     : url_raw,
         'bold'        : bold,
         'b'           : bold,
         'italic'      : italic,
@@ -270,7 +270,8 @@ def render(contents, env_params, renderer):
     contents['projects'] = projects
 
     # pre-render section contents
-    sections = list(contents['sections'])
+    raw_sections = list(contents['sections'])
+    sections     = list(contents['sections'])
     for i, sect in enumerate(sections):
         sect            = dict(sect)
         content         = env.from_string(sect['content'])
@@ -284,9 +285,10 @@ def render(contents, env_params, renderer):
     abstract = abstract.render(**renderer)
 
     renderer.update({
-        'abstract' : abstract,
-        'sections' : sections,
-        'front'    : contents['front'],
+        'abstract'     : abstract,
+        'raw_sections' : raw_sections,
+        'sections'     : sections,
+        'front'        : contents['front'],
     })
 
     rendered = {}
