@@ -12,6 +12,7 @@
   </ul>
 
   <ul class="list pl4">
+    <li>{{ url('resume.pdf', 'CV') }}</li>
     {% for c in front.contact %}
     <li>{{ url(c.href, c.name) }}</li>
     {% endfor %}

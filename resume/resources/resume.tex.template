@@ -12,19 +12,22 @@
 }
 
 
-\usepackage[font=small,labelfont=bf,margin=1.0in]{caption}
+\definecolor{grey}{rgb}{0.5, 0.5, 0.5}
+
+\usepackage{tgadventor}
 \renewcommand{\familydefault}{\sfdefault}
 
 \author{ [[ front.title ]] }
 
 \address{
+
 [% for line in front.address %]
-[[ line ]]\\
+\textcolor{grey}{[[ line ]]}\\
 [% endfor %]
 }
 {
 [% for line in front.details %]
-[[ line ]]\\
+\textcolor{grey}{[[ line ]]}\\
 [% endfor %]
 [% for c in front.contact %]
 [[ url(c.href) ]]\\
@@ -43,15 +46,14 @@
 \begin{category}{Timeline}
 \citemnobullet
 
-%% \begin{itemize}
-
+%% skip last section ("outside of work")
 [% for sect in raw_sections[:-1] %]
 
-\item[] \textbf{[[ sect.title ]]}\newline\textit{[[sect.subtitle]]}
+\item[] \textbf{[[ sect.title ]]}\newline
+\textcolor{grey}{\textit{[[sect.subtitle]]}}
 
 [% endfor %]
 
-%% \end{itemize}
 
 \end{category}
 

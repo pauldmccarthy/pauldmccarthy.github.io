@@ -12,29 +12,32 @@
 }
 
 
-\usepackage[font=small,labelfont=bf,margin=1.0in]{caption}
+\definecolor{grey}{rgb}{0.5, 0.5, 0.5}
+
+\usepackage{tgadventor}
 \renewcommand{\familydefault}{\sfdefault}
 
 \author{ Paul McCarthy }
 
 \address{
 
-10 Newton Street\\
 
-Llanberis, LL55 4HN\\
+\textcolor{grey}{10 Newton Street}\\
 
-Wales, United Kingdom\\
+\textcolor{grey}{Llanberis, LL55 4HN}\\
 
-+44 7474795710\\
+\textcolor{grey}{Wales, United Kingdom}\\
+
+\textcolor{grey}{+44 7474795710}\\
 
 }
 {
 
-DOB 26th July 1982\\
+\textcolor{grey}{DOB 26th July 1982}\\
 
-Australian citizen\\
+\textcolor{grey}{Australian citizen}\\
 
-UK permanent resident\\
+\textcolor{grey}{UK permanent resident}\\
 
 
 \mbox{\small\url{https://github.com/pauldmccarthy/}}\\
@@ -62,9 +65,47 @@ microcontroller programming, web development, and data analysis.
 \end{category}
 
 
+\begin{category}{Timeline}
+\citemnobullet
+
+%% skip last section ("outside of work")
+
+
+\item[] \textbf{2014-present - Research software engineer}\newline
+\textcolor{grey}{\textit{Oxford Centre for Integrative Neuroimaging (OxCIN/FMRIB), UK}}
+
+
+
+\item[] \textbf{2010-2013 - PhD}\newline
+\textcolor{grey}{\textit{Department of Computer Science, University of Otago, Dunedin, New Zealand}}
+
+
+
+\item[] \textbf{2007-2010 - Software engineer}\newline
+\textcolor{grey}{\textit{CSIRO, Hobart, Australia}}
+
+
+
+\item[] \textbf{2006-2007 - Software engineer}\newline
+\textcolor{grey}{\textit{Australian Defence Force Academy, Canberra, Australia}}
+
+
+
+\item[] \textbf{2002-2006 - Master of Science}\newline
+\textcolor{grey}{\textit{Department of Computer Science, University of South Australia, Adelaide, Australia}}
+
+
+
+
+\end{category}
+
+
 
 \begin{category}{2014-present - Research software engineer}
-\citemnobullet \textit{Oxford Centre for Integrative Neuroimaging (OxCIN/FMRIB), UK}
+\citemnobullet
+\begin{changemargin}{-0.5in}{0.5in}
+\textcolor{grey}{\textit{Oxford Centre for Integrative Neuroimaging (OxCIN/FMRIB), UK}}
+\end{changemargin}
 
 \citemnobullet My current position involves software development, management, and
 maintenance on a range of projects related to \href{https://fsl.fmrib.ox.ac.uk/fsl/docs/}{FSL},
@@ -80,9 +121,9 @@ in Python.
 build system for FSL, based on the \href{https://docs.conda.io/}{conda}
 environment and package manager, inspired by the \href{https://conda-forge.org/}{conda-forge} package ecosystem, and making extensive use of
 GitLab CI and Amazon AWS. As part of this work I also added support
-for building FSL on Apple Silicon, and made substantial improvements
-to the build processes for our C++/CUDA applications to achieve
-compatibilty across a wide range of GPU hardware
+for building FSL on Apple Silicon and Linux aarch64 platforms, and
+made substantial improvements to the build processes for our C++/CUDA
+applications to achieve compatibilty across a wide range of GPU hardware.
 \item \href{https://git.fmrib.ox.ac.uk/fsl/MMORF}{\textbf{MMORF}} - a CUDA-accelerated C++ application
 for non-linear registration of MRI images, designed and developed by
 my colleague \href{https://www.ndcn.ox.ac.uk/team/frederik-lange}{Frederik Lange}. I ported the
@@ -101,7 +142,7 @@ application for working with very large CSV files from the \href{https://www.ukb
 \item \href{https://git.fmrib.ox.ac.uk/fsl/pyfeeds}{\texttt{pyfeeds}}, a bespoke testing framework used
 to run our internal suite of integration tests, which supports custom
 evaluation rules, and can execute tests in parallel on a HPC cluster.
-\end{itemize}
+\end{itemize}\leavevmode\newline
 
 Most of the software I develop is open-source, and I actively use and
 contribute to open-source projects:\newline
@@ -114,7 +155,7 @@ and \href{https://github.com/mikedh/trimesh/pulls?q=is%3Apr+pauldmccarthy}{\text
 \item I have played an active role in the \href{https://conda-forge.org/}{conda-forge} package ecosystem, having used conda-forge to
 publish my own software, and being added to the maintainence team for
 a number of other packages, such as \href{https://github.com/conda-forge/wxwidgets-feedstock}{\texttt{wxwidgets}}, \href{https://github.com/conda-forge/wxpython-feedstock}{\texttt{wxPython}}, and \href{https://github.com/conda-forge/libxmlpp-feedstock}{\texttt{libxml++}}.
-\end{itemize}
+\end{itemize}\leavevmode\newline
 
 I have also played an active role in my workplace in teaching,
 public engagement, and generally helping out where I can:\newline
@@ -142,20 +183,20 @@ started with the Python programming language.
 benefit of Oxford-based researchers and PhD students.
 \item I have lectured and tutored on the \href{https://fsl.fmrib.ox.ac.uk/fslcourse/}{FSL course}, an international course held annually, which teaches MRI analysis
 using FSL.
-\end{itemize}
+\end{itemize}\leavevmode\newline
 
 I have been fortunate enough to be listed as a co-author for my
 technical contributions to a range of academic studies, including:\newline
 
 \begin{itemize}
-\item \indent Go Figure: Transparency in neuroscience images preserves context and
+\item {\small\small\textbf{Go Figure: Transparency in neuroscience images preserves context and
 clarifies interpretation
-\newline
-\item \indent MMORF—FSL's MultiMOdal Registration Framework\newline
-\item \indent The mouse motor system contains multiple premotor areas and partially follows human organizational principles\newline
-\item \indent The effects of genetic and modifiable risk factors on brain regions vulnerable to ageing and disease\newline
-\item \indent SARS-CoV-2 is associated with changes in brain structure in UK Biobank\newline
-\item \indent Image processing and Quality Control for the first 10,000 brain imaging datasets from UK Biobank\newline
+}\\ \textcolor{grey}{\textit{Taylor et. al. Arxiv [Preprint] 2025}}}\\ \mbox{\small\url{https://doi.org/10.48550/arXiv.2504.07824}}
+\item {\small\small\textbf{MMORF—FSL's MultiMOdal Registration Framework}\\ \textcolor{grey}{\textit{Lange et. al. Imaging Neuroscience 2024}}}\\ \mbox{\small\url{http://doi.org/10.1162/imag_a_00100}}
+\item {\small\small\textbf{The mouse motor system contains multiple premotor areas and partially follows human organizational principles}\\ \textcolor{grey}{\textit{Lazari et. al. Cell Reports 2024}}}\\ \mbox{\small\url{https://doi.org/10.1016/j.celrep.2024.114191}}
+\item {\small\small\textbf{The effects of genetic and modifiable risk factors on brain regions vulnerable to ageing and disease}\\ \textcolor{grey}{\textit{Manuello et. al. Nature Communications 2024}}}\\ \mbox{\small\url{http://doi.org/10.1038/s41467-024-46344-2}}
+\item {\small\small\textbf{SARS-CoV-2 is associated with changes in brain structure in UK Biobank}\\ \textcolor{grey}{\textit{Douaud et. al. Nature 2022}}}\\ \mbox{\small\url{https://doi.org/10.1038/s41586-022-04569-5}}
+\item {\small\small\textbf{Image processing and Quality Control for the first 10,000 brain imaging datasets from UK Biobank}\\ \textcolor{grey}{\textit{Alfaro-Almagro et. al. Neuroimage 2018}}}\\ \mbox{\small\url{https://doi.org/10.1016/j.neuroimage.2017.10.034}}
 \end{itemize}
 
 \end{category}
@@ -164,14 +205,17 @@ clarifies interpretation
 
 
 \begin{category}{2010-2013 - PhD}
-\citemnobullet \textit{Department of Computer Science, University of Otago, Dunedin, New Zealand}
+\citemnobullet
+\begin{changemargin}{-0.5in}{0.5in}
+\textcolor{grey}{\textit{Department of Computer Science, University of Otago, Dunedin, New Zealand}}
+\end{changemargin}
 
 \citemnobullet My \href{https://ourarchive.otago.ac.nz/handle/10523/4864}{PhD} revolved around the application of graph
 theory techinques to fMRI data, to explore how functional
 connectivity changes with age and the presence of Alzheimer’s
 disease. Part of my PhD work was published in an academic journal:\newline
 
-\indent The age-related posterior-anterior shift as revealed by voxelwise analysis of functional brain networks\newline\newline
+{\small\small\textbf{The age-related posterior-anterior shift as revealed by voxelwise analysis of functional brain networks}\\ \textcolor{grey}{\textit{McCarthy et. al. Frontiers in Aging neuroscience 2014}}}\\ \mbox{\small\url{https://doi.org/10.3389/fnagi.2014.00301}}\leavevmode\newline
 
 Most of the code which formed the basis for my analyses was written as
 part of a package I developed called \href{https://github.com/pauldmccarthy/ccnet}{\texttt{ccnet}},
@@ -188,7 +232,10 @@ memory usage
 
 
 \begin{category}{2007-2010 - Software engineer}
-\citemnobullet \textit{CSIRO, Hobart, Australia}
+\citemnobullet
+\begin{changemargin}{-0.5in}{0.5in}
+\textcolor{grey}{\textit{CSIRO, Hobart, Australia}}
+\end{changemargin}
 
 \citemnobullet I worked as the primary software engineer in the deployment of three
 wireless sensor networks in Tasmania, including:\newline
@@ -201,7 +248,7 @@ acoustic modems for inter-node communication, and a 3G modem for
 internet uplink
 \item and a prototype low cost marine wireless sensor node, for deployment in
 salmon hatcheries.
-\end{itemize}
+\end{itemize}\leavevmode\newline
 
 I played leading roles in each of these projects, working on hardware/
 electronic design and construction, low level system programming and
@@ -227,7 +274,10 @@ found at \mbox{\small\url{https://github.com/aodn/imos-toolbox/}}
 
 
 \begin{category}{2006-2007 - Software engineer}
-\citemnobullet \textit{Australian Defence Force Academy, Canberra, Australia}
+\citemnobullet
+\begin{changemargin}{-0.5in}{0.5in}
+\textcolor{grey}{\textit{Australian Defence Force Academy, Canberra, Australia}}
+\end{changemargin}
 
 \citemnobullet A mixture of software development, maintenance, and experimentation.
 My first project involved the development of a multi-agent system for
@@ -244,7 +294,10 @@ graph or tabular form of simulation data.
 
 
 \begin{category}{2002-2006 - Master of Science}
-\citemnobullet \textit{Department of Computer Science, University of South Australia, Adelaide, Australia}
+\citemnobullet
+\begin{changemargin}{-0.5in}{0.5in}
+\textcolor{grey}{\textit{Department of Computer Science, University of South Australia, Adelaide, Australia}}
+\end{changemargin}
 
 \citemnobullet I completed a Bachelor of Computer Science with First Class Honours
 (GPA 6.5), and used credit from my Honours degree to progress to a
@@ -259,7 +312,10 @@ evidence.
 
 
 \begin{category}{Outside of work}
-\citemnobullet \textit{Llanberis, North Wales, UK}
+\citemnobullet
+\begin{changemargin}{-0.5in}{0.5in}
+\textcolor{grey}{\textit{Llanberis, North Wales, UK}}
+\end{changemargin}
 
 \citemnobullet Most of my free time is spent in the outdoors or at the climbing
 wall. I have spent much of my adult life suffering from an addiction

@@ -138,10 +138,9 @@ def latex():
         lines = [l.strip() for l in text.split('\n')]
         text  = '\n'.join(lines)
         # double newline -> para
-        return text.replace('\n\n', r'\newline' + '\n\n')
+        text = text.replace('\n\n', r'\newline' + '\n\n')
+        return text.replace(r'}\newline', r'}\leavevmode\newline')
 
-    def postproc(text):
-        return text.replace(r'}\newline', '}')
 
     def code(text):
         return rf'\texttt{{{text}}}'.replace('_', r'\_')
@@ -165,10 +164,12 @@ def latex():
 
     def pub(title, author, url, doi, journal, year):
         url = url_raw(url)
-        return rf'\textbf{{{title}}} \textit{{{author} {journal} {year}}} {url}'
+        return (rf'{{\small\small\textbf{{{title}}}\\ '
+                rf'\textcolor{{grey}}{{\textit{{{author} {journal} {year}}}}}}}\\ '
+                rf'{url}')
 
     def project(content, **_):
-        return postproc(preproc(content))
+        return preproc(content)
 
     def itemise(*items):
         lines = [r'\begin{itemize}']
@@ -181,10 +182,13 @@ def latex():
         return '\n'.join(lines)
 
     def section(title, subtitle, content, **_):
-        content = postproc(preproc(content))
+        content = preproc(content)
         return '\n'.join([
             rf'\begin{{category}}{{{title}}}',
-            rf'\citemnobullet \textit{{{subtitle}}}',
+            rf'\citemnobullet',
+            rf'\begin{{changemargin}}{{-0.5in}}{{0.5in}}',
+            rf'\textcolor{{grey}}{{\textit{{{subtitle}}}}}',
+            rf'\end{{changemargin}}',
             '',
             rf'\citemnobullet {content}',
             '',
