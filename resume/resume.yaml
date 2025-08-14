@@ -106,7 +106,7 @@ sections:
   - id:       2007-2010
     title:    2007-2010 - Software engineer
     subtitle: CSIRO, Hobart, Australia
-    tagline:  Java, MATLAB, C, Python, hardware
+    tagline:  Java, MATLAB, C, Python, JavaScript, SQL, hardware
     content: |
 
       I worked as the primary software engineer in the deployment of three
