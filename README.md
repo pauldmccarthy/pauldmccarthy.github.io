@@ -37,7 +37,7 @@ To re-generate the resume files (assuming uv and pdflatex are installed):
 ```
 cd resume
 uv run ./render.py ./resume.yaml ./ html
-uv run ./render.py ./resume.yaml ./ pdf
+uv run ./render.py ./resume.yaml ./ latex
 pdflatex
 TEXINPUTS=./resources: pdflatex ./resume.tex
 ```

@@ -100,7 +100,7 @@ sections:
       Before migrating my code to C, I used the first 12 months of my PhD as
       an opportunity to teach myself Haskell, but then decided to port all
       of my code to C for more fine-grained control over performance and
-      memory usage
+      memory usage.
 
 
   - id:       2007-2010
@@ -276,7 +276,7 @@ projects:
   docathlon: |
     In 2023 I organised and led an effort to migrate the FSL documentation
     from an old Wiki framework ({{ url('moinmoin', 'MoinMoin') }}) to a
-    markdown-based framework ({{ url('docsify', 'Docsify') }}). I organised
+    markdown-based framework ({{ url('mkdocs', 'MkDocs') }}). I organised
     a {{ url('docathlon', '"docathlon"') }} to solicit help from colleagues
     in porting the old documentation over to the {{ url('fsl', 'new site')
     }}, which also doubled as a {{ c('git') }} training workshop for the
@@ -400,9 +400,8 @@ urls:
   conda:        https://docs.conda.io/
   conda_forge:  https://conda-forge.org/
   docathlon:    https://git.fmrib.ox.ac.uk/paulmc/fsl-docathlon-2023/
-  docsify:      https://docsify.js.org/
   fsl:          https://fsl.fmrib.ox.ac.uk/fsl/docs/
-  fsl_ci:       https://fsl.fmrib.ox.ac.uk/fsl/docs/#/development/management/index
+  fsl_ci:       https://fsl.fmrib.ox.ac.uk/fsl/docs/development/management/index.html
   fsl_course:   https://fsl.fmrib.ox.ac.uk/fslcourse/
   fsleyes:      https://open.oxcin.ox.ac.uk/pages/fsl/fsleyes/fsleyes/userdoc/
   funpack:      https://pages.fmrib.ox.ac.uk/fsl/funpack/
@@ -417,6 +416,7 @@ urls:
   janeway:      https://github.com/BirkbeckCTP/janeway/
   libxmlpp_cf:  https://github.com/conda-forge/libxmlpp-feedstock
   masters:      forensic_analysis_of_mobile_phones.pdf
+  mkdocs:       https://www.mkdocs.org/
   mmorf:        https://git.fmrib.ox.ac.uk/fsl/MMORF
   moinmoin:     https://github.com/moinwiki
   mri_bootcamp: https://pages.fmrib.ox.ac.uk/paulmc/oxford_neuroscience_experience/
